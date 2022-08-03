@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('http://fonts.cdnfonts.com/css/vcr-eas');
+@import url("../media/VCR.ttf");
 
 * {
     color: white;
@@ -16,7 +16,7 @@ nav, ul {
     overflow: hidden;
     background-color: rgb(66, 62, 62);
     font-size: 3vh;
-    font-family: 'VCR EAS', sans-serif;
+    font-family: 'VCR OSD Mono', sans-serif;
 }
 
 ul {
@@ -38,7 +38,7 @@ li, a {
 }
 
 main {
-    font-family: 'VCR EAS', sans-serif !important;
+    font-family: 'VCR OSD Mono', sans-serif !important;
 }
 
 footer, #footer-comment{
