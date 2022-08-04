@@ -1,0 +1,5 @@
+{
+    "id": "violation",
+    "color": "red",
+    "image": "./public/violation.svg"
+}
