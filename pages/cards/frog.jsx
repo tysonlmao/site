@@ -1,14 +1,19 @@
 import React from "react"
+import Head from "next/head"
+
 
 export default function Frog(){
     return(
         <div>
             <Head>
-                <title>e</title>
+                <title>Frogged</title>
             </Head>
 
-            <main>
-        
+            <main id="">
+                <button type="userField">a</button>
+                <button type="userField">b</button>
+                <button type="userField">c</button>
+                <button type="userField">d</button>
             </main>
         </div>
 
