@@ -1,4 +1,3 @@
-import { Main } from 'next/document'
 import Head from 'next/head'
 
 export default function Home() {
