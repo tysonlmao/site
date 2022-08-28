@@ -10,12 +10,12 @@ export default function Frog(){
             </Head>
 
             <main id="">
-                <button type="userField">a</button>
-                <button type="userField">b</button>
-                <button type="userField">c</button>
-                <button type="userField">d</button>
+                <form action="/" method="post">
+                    <button type="submit">no</button>
+                </form>
+
             </main>
         </div>
 
-    )
+    ) 
 }
