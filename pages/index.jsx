@@ -1,4 +1,3 @@
-import { Main } from 'next/document'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,7 +10,13 @@ export default function Home() {
       </Head>
 
       <main>
-        <p>duncan smells</p>
+        <ul className="list-group">
+          <li className="list-group-item list-group-item-success d-grid">
+            <a href="cards/frog" className="btn btn-block btn-success">
+              <i className="bi bi-backspace-fill"/>
+              frog</a>
+          </li>
+        </ul>
       </main>
     </div>
     

@@ -9,13 +9,13 @@ export default function Frog(){
                 <title>Frogged</title>
             </Head>
 
-            <main id="">
-                <form action="/" method="post">
-                    <button type="submit">no</button>
+            <main>
+                <form action="../results" method="get">
+                <input type="text" id="frog" name="frog" value="dave"/>
+                    <button type="submit">Submit</button>
                 </form>
-
             </main>
         </div>
 
-    ) 
+    )
 }
