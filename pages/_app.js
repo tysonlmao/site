@@ -1,14 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import Layout from '../components/layout'
-
+import 'w3-css/w3.css'
+import '../styles/card.css'
 
 function MyApp({ Component, pageProps }) {
   return(
-    <Layout>
       <Component {...pageProps} />
-    </Layout>
-    ) 
+    )
 }
 
 export default MyApp

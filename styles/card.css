@@ -1,0 +1,47 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('http://fonts.cdnfonts.com/css/sf-mono');
+
+.card-bounds {
+  background-color: rgb(31, 29, 29);
+  width: 500px;
+  height: 800px;
+  font-family: 'VCR EAS', sans-serif;
+  font-size: 40px;
+  color: #fff; 
+  border: red 2px solid;                         
+}
+
+.pfp-block {
+  padding: 25px;
+  border: red 2px solid;                         
+
+}
+
+/* 
+info-block
+*/
+
+.info-block {
+  font-family: 'VCR EAS', sans-serif;
+  padding: 25px;
+  margin: 25px;
+  border: blue 2px solid;                         
+
+}
+
+.info-block, h2 {
+  font-family: 'VCR EAS', sans-serif;
+}
+
+.info-block, h4 {
+  font-family: 'SF Mono', sans-serif;
+  border: purple 2px solid;                         
+}
+
+/* 
+footer-index
+*/
+.footer-index {
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
