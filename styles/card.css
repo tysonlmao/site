@@ -1,11 +1,12 @@
 @import url('http://fonts.cdnfonts.com/css/gilroy-bold');
 @import url('http://fonts.cdnfonts.com/css/sf-mono');
+@import url('http://fonts.cdnfonts.com/css/vcr-osd-mono');
 
 .card-bounds {
   background-color: rgb(31, 29, 29);
   width: 500px;
   height: 800px;
-  font-family: 'VCR EAS', sans-serif;
+  font-family: 'VCR OSD Mono', sans-serif;
   font-size: 40px;
   color: #fff; 
   border: red 2px solid;                         
@@ -13,30 +14,37 @@
 
 .pfp-block {
   padding: 25px;
+  height: 200px;
   border: red 2px solid;                         
 
 }
-
 /* 
 info-block
 */
-
 .info-block {
-  font-family: 'VCR EAS', sans-serif;
+  font-family: 'VCR OSD Mono', sans-serif;
   padding: 25px;
   margin: 25px;
-  border: blue 2px solid;                         
+  /* border: blue 2px solid;   */
+  height: 150px;                       
 
 }
 
 .info-block, h2 {
-  font-family: 'VCR EAS', sans-serif;
+  font-family: 'VCR OSD Mono', sans-serif;
+  max-height: 150px;
 }
 
 .info-block, h4 {
   font-family: 'SF Mono', sans-serif;
-  border: purple 2px solid;                         
+  /* border: purple 2px solid;     */
+  max-height: 150px;                     
 }
+
+.card-row-2 {
+  padding: 25px;
+}
+
 
 /* 
 footer-index
