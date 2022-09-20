@@ -8,8 +8,10 @@ export default function removelater() {
                 <title>yeah</title>
             </Head>
 
-            <h1>July 2, 2022</h1>
+        
+        <div className="discard">
 
+            <h1 className="w3-center">July 2, 2022</h1>
             <h4>Theres been alot of shit bothering me, on my mind and both me just being me (that kid that talks way too much
         about tech) and being a little bit socially awkward but not as much as others (love u Addison) I think we can
         both agree Im way more fluent in trying to get a point across over a message rather then saying it in person.
@@ -41,7 +43,7 @@ export default function removelater() {
         that period instead of trying to support me and not being able to see anyone because I wasnt allowed out due to
         the health issues. It was during this time I started to get acne and its taken this long to start clearing in
         the last couple weeks. I hate it so much and it makes me feel like garbage. Now lets have an intermission back
-        in the land of homophobia. Ever think that shaving your legs makes you (and I quote) a "fucking faggot" -my dad.
+        in the land of homophobia. Ever think that shaving your legs makes you (and I quote) a fucking faggot -my dad.
         Yeah me neither but when I started not caring anymore as much if my parents found out I was bi and that I would
         just have to take the blunt of it or Im gonna be completely depressed until I move out of home. So like Ive
         wanted to do for ages because I hate having body hair, and I cop that for it. Absolutely amazing. The funny
@@ -74,5 +76,6 @@ export default function removelater() {
         want during the week and will probably end up getting lonely. So yeah thatd probably be half of what I can
         think to write. But again Ive got short term memory loss so you cant blame me lmao</h4>
         </div>
+</div>
     )
 }
