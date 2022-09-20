@@ -6,6 +6,7 @@ export default function removelater() {
         <div>
             <Head>
                 <title>yeah</title>
+                <meta name="description" content="rant from july 2, 2022" />
             </Head>
 
         
