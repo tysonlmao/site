@@ -1,4 +1,61 @@
-main-body {
-    margin: 0 auto;
-    background-color: #818181;
+@import url("http://fonts.cdnfonts.com/css/vcr-osd-mono");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #28282b;
+}
+
+.nav-li,
+.nav-a,
+.nav-button {
+  font-family: "VCR OSD Mono", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.nav-logo {
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links .nav-li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links .nav-li .nav-a {
+  transition: all 0.4s ease 0s;
+}
+
+.nav-links .nav-li .nav-a:hover {
+  color: #fdadbe;
+}
+
+.nav-button {
+  padding: 6px 15px;
+  background-color: rgba(253, 173, 190, 1);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  color: #000;
+}
+
+.nav-button:hover {
+  background-color: rgba(253, 173, 190, 0.8);
 }
