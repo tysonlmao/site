@@ -11,9 +11,11 @@ export default function Home() {
       </Head>
 
       <Nav/>
-      <main className="main-body">
-        <p>hi</p>
-      </main>
+        <main className="main-body">
+          <div id="about" className="about-container">
+            <h2>hi</h2>
+          </div>
+        </main>
       {/* <Footer/> */}
     </div>
     
