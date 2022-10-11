@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="main-body">
       <Head>
-        <title>Front site</title>
+        <title>Home | tysonlmao</title>
         <meta name="description" content="joe biden" />
       </Head>
 
@@ -14,7 +14,7 @@ export default function Home() {
       <main className="main-body">
         <p>hi</p>
       </main>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
     
   )

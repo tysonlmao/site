@@ -1,12 +1,12 @@
-@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
-@import url('http://fonts.cdnfonts.com/css/sf-mono');
-@import url('http://fonts.cdnfonts.com/css/vcr-osd-mono');
+@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
+@import url("http://fonts.cdnfonts.com/css/sf-mono");
+@import url("http://fonts.cdnfonts.com/css/vcr-osd-mono");
 
 .page {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  font-family: 'SF Mono';
+  font-family: "SF Mono";
 }
 
 .card-container {
@@ -21,7 +21,6 @@
   width: 128px;
   height: 128px;
 }
-
 
 @media screen and (min-width: 200px) {
   .page {
