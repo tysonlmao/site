@@ -11,7 +11,8 @@ export default function Nav(){
                         <li className="nav-li"><a className="nav-a" href="#about">About</a></li>
                     </ul>
                 </nav>
-                <a className="nav-cta" href="/contact"><button className="nav-button">CONTACT</button></a>
+                {/* <a className="nav-cta" href="/contact"> */}
+                <button className="nav-button">CONTACT</button>
             </header>
         </div>
     )
