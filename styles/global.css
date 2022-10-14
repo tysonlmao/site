@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   background-color: #28282b;
+  font-family: "VCR OSD Mono" sans-serif;
 }
 
 .nav-li,
@@ -14,7 +15,7 @@
 .nav-button {
   font-family: "VCR OSD Mono", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -24,9 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 12px;
-  padding: 20px 5%;
-  font-family: "Comic Sans MS", sans-serif;
+  padding: 5px 5%;
 }
 
 .nav-logo {
@@ -38,8 +37,7 @@
 }
 
 .nav-links .nav-li {
-  display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 12px;
 }
 
 .nav-links .nav-li .nav-a {
@@ -52,8 +50,8 @@
 
 .nav-button {
   --green: #fdadbe;
-  font-size: 15px;
-  padding: 0.5rem 1rem;
+  font-size: inherit;
+  padding: 0.2rem 0.5rem;
   letter-spacing: 0.06em;
   position: relative;
   font-family: "VCR OSD Mono" sans-serif;
@@ -104,9 +102,7 @@
   }
 }
 
-.about-container {
-  /* add a smooth slide effect on click from nav */
-}
+/* add a smooth slide effect on click from nav */
 
 .about-li {
   text-align: center;
@@ -122,4 +118,16 @@
   bottom: 0;
   height: 2.5rem;
   text-align: left;
+}
+
+.footer-links {
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  font-family: "Comic Sans MS", sans-serif;
+  list-style: none;
+  line-height: 1.5rem;
+}
+
+.footer-container {
 }
