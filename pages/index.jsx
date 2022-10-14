@@ -17,7 +17,7 @@ export default function Home() {
         <main className="main-body">
           {/* probably add content here */}
         </main>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
     
   )
