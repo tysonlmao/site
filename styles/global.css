@@ -93,10 +93,9 @@
     display: table;
     width: 100%;
     text-align: center;
-    transition: 0.2s ease 0;
+    transition: 0.2s ease;
     margin: auto;
   }
-
   .nav-button {
     margin: 10px;
   }
@@ -129,5 +128,32 @@
   line-height: 1.5rem;
 }
 
-.footer-container {
+/* 404 page css */
+.main-404 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #9aa0a6;
+  transition: 0.2s ease;
+  line-height: 1.3rem;
+}
+
+.error-message h3 {
+  font-size: 0.8rem !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.error-message h2 {
+  font-size: 1.3rem !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.error-message:hover {
+  transition: 0.2s ease;
+  color: #fdadbe;
 }
