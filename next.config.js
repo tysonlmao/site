@@ -6,8 +6,9 @@ const nextConfig = {
 
 nextConfig
 module.exports = {
-  images: {
-    domains: ['assets.tysonlmao.dev'],
-    unoptimized: true,
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
   },
 }
