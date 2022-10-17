@@ -12,7 +12,9 @@ export default function Home() {
 
       <Nav/>
         <header className="">
-          
+          <div>
+            <h2>Welcome to tysonlmao.dev</h2>
+          </div>
         </header>
         <main className="main-body">
           {/* probably add content here */}
