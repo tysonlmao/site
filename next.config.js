@@ -4,11 +4,11 @@ const nextConfig = {
   swcMinify: true,
 }
 
-
+nextConfig
 module.exports = {
-  nextConfig,
-  images: {
-    domains: ['assets.tysonlmao.dev'],
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
   },
-
 }

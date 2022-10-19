@@ -9,7 +9,7 @@ export default function pagenotfound() {
             </Head>
             <div className="main-404">
                 <div className="error-icon-404">
-                    <Image src="https://assets.tysonlmao.dev/assets/mac_death.png" width="72"  height="79.5" />
+                    <Image src="https://assets.tysonlmao.dev/assets/mac_death.png" width="72"  height="79.5" alt="mac_death"/>
                 </div>
                 <div className="error-message">
                     <h2>404</h2>

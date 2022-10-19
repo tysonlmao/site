@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Footer from '../components/footer'
 import Nav from '../components/nav'
+import Script from 'next/script'
 
 export default function Home() {
   let bob = 578315;
@@ -24,4 +25,4 @@ export default function Home() {
     </div>
     
   )
-}
+} 
