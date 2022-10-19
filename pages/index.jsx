@@ -18,8 +18,6 @@ export default function Home() {
         </header>
         <main className="main-body">
           {/* probably add content here */}
-
-          <h3>{'alert(bob)'}</h3>
         </main>
       {/* <Footer/> */}
     </div>
