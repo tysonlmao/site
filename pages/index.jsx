@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import Nav from '../components/nav'
 
 export default function Home() {
+  let bob = 578315;
   return (
     <div className="main-body">
       <Head>
@@ -16,6 +17,8 @@ export default function Home() {
         </header>
         <main className="main-body">
           {/* probably add content here */}
+
+          <h3>{'alert(bob)'}</h3>
         </main>
       {/* <Footer/> */}
     </div>
