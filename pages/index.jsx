@@ -4,7 +4,6 @@ import Nav from '../components/nav'
 import Script from 'next/script'
 
 export default function Home() {
-  let bob = 578315;
   return (
     <div className="main-body">
       <Head>
@@ -14,13 +13,12 @@ export default function Home() {
 
       <Nav/>
         <header className="">
-          
         </header>
         <main className="main-body">
           {/* probably add content here */}
         </main>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
     
   )
-} 
+}
