@@ -15,43 +15,8 @@ export default function Home() {
         <header className="">
         </header>
         <main className="main-body">
-          {/* probably add content here */}
           {/* <h2 className="main">welcome text</h2> */}
           <Neofetch/>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
-          <h2>a</h2>
         </main>
       <Footer/>
     </div>
