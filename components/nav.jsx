@@ -12,7 +12,7 @@ export default function Nav(){
                     </div>
                 </nav>
                 {/* <a className="nav-cta" href="/contact"> */}
-                <button className="nav-button">CONTACT</button>
+                <button className="nav-button"><a href="https://discord.gg/czwZFXQszb"></a>Discord</button>
             </header>
         </div>
     )
