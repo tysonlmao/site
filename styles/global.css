@@ -23,9 +23,10 @@
 
 .nav-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-self: center;
   align-items: center;
-  padding: 5px 5%;
+  padding: 0.8rem;
 }
 
 .nav-logo {
@@ -50,8 +51,9 @@
 
 .nav-button {
   --green: #fdadbe;
+  position: absolute;
   font-size: inherit;
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.3rem;
   letter-spacing: 0.06em;
   position: relative;
   font-family: "VCR OSD Mono" sans-serif;
@@ -90,14 +92,14 @@
 
 @media screen and (max-width: 800px) {
   .nav-header {
-    display: table;
-    width: 100%;
+    display: flex;
     text-align: center;
     transition: 0.2s ease;
-    margin: auto;
+    align-self: center;
+    /* margin: auto; */
   }
   .nav-button {
-    margin: 10px;
+    margin: 1px;
   }
 }
 
@@ -181,4 +183,38 @@
 .error-message:hover {
   transition: 0.2s ease;
   color: #fdadbe;
+}
+
+/* neofetch 
+   will require @media queries to fix 
+   text from dying on smaller screen sizes
+*/
+
+.neofetch {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: #28282b;
+}
+.neo-sub-container {
+  /* for debug only */
+  /* border: 2px solid #fdadbe; */
+  display: inline-block;
+  width: 30%;
+  font-family: "Consolas" sans-serif;
+  align-self: center;
+  padding: 0.2rem;
+  margin: 5px;
+}
+
+.pre-neo {
+  overflow: visible;
+}
+
+.neo-ul {
+  list-style: none;
+  font-family: "SF Mono", sans-serif;
+  color: #fdadbe;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
