@@ -3,32 +3,6 @@ import React from 'react'
 export default function Neofetch() {
     return (
         <div className="neofetch">
-            <div className="neo-container">
-                
-            </div>
-            <div className="neo-sub-container">
-                {/* <pre className="pre-neo">
-                                         ....,,:;+ccllll
-                           ...,,+:;  cllllllllllllllllll
-                     ,cclllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     llllllllllllll  lllllllllllllllllll
-                     `'ccllllllllll  lllllllllllllllllll
-                           `' \\*::  :ccllllllllllllllll
-                                            ````''*::cll
-                                                      ``
-                </pre> */}
-                <h4 className="neo-ul">Windows ASCII</h4>
-            </div>
             <div className="neo-sub-container">
                 <ul className="neo-ul">
                     <li>Tyson@TYSONFASTPC</li>
