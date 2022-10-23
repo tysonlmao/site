@@ -189,36 +189,3 @@
    will require @media queries to fix 
    text from dying on smaller screen sizes
 */
-
-.neofetch {
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  background-color: #28282b;
-}
-.neo-sub-container {
-  /* for debug only */
-  /* border: 2px solid #fdadbe; */
-  display: inline-block;
-  width: 30%;
-  font-family: "Consolas" sans-serif;
-  align-self: center;
-  padding: 0.2rem;
-  margin: 5px;
-}
-
-.pre-neo {
-  overflow: visible;
-}
-
-.neo-ul {
-  list-style: none;
-  font-family: "SF Mono", sans-serif;
-  color: #fdadbe;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-/* front site css
-   general bad css as per usual
-*/
