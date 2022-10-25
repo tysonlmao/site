@@ -124,6 +124,11 @@
   font-family: "VCR OSD Mono", sans-serif;
 }
 
+.iframe-temp {
+  width: 50%;
+  height: 33.8rem;
+}
+
 .footer-ul {
   display: inline-grid;
   grid-auto-flow: row;
