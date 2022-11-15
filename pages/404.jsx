@@ -14,8 +14,6 @@ export default function pagenotfound() {
                 <div className="error-message">
                     <h2>404</h2>
                     <h3>Keep trying</h3>
-                    <br />
-                    <p>HOW_DID_YOU_GET_HERE</p>
                 </div>
             </div>
         </div>
