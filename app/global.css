@@ -4,18 +4,18 @@ html {
 }
 
 body {
-  background-color: #111016;
+  background-color: #262335;
   font-family: system-ui;
-  color: white;
+  color: #e3d6e9;
 }
 
 .center {
-  color: white;
+  color: #e3d6e9;
   font-weight: 600;
   font-size: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 90vh;
+  min-height: 70vh;
 }
