@@ -13,7 +13,7 @@ export default async function BlogPage() {
     const posts = await getPosts();
     return(
         <div>
-            <h1>blog</h1>
+            <p className="center">Site is under construction!</p>
             <div>
                 {posts?.map((post) => {
                     return <Post key={post.id} post={post} />;
@@ -27,6 +27,7 @@ function Post({ post }: any) {
     const { id, post_title, post_content, created } = post || {};
 
     return (
+        
         <Link href={`/posts/${id}`}>
             <div>
                 <h2>{post_title}</h2>
