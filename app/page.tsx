@@ -1,7 +1,7 @@
 export default function HomePage() {
     return(
         <div>
-            <p>hi</p>
+            <p className="center">Site is under construction!</p>
         </div>
     );
 }

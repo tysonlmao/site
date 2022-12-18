@@ -1,0 +1,21 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #111016;
+  font-family: system-ui;
+  color: white;
+}
+
+.center {
+  color: white;
+  font-weight: 600;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+}
