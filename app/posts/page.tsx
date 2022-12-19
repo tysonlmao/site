@@ -18,7 +18,7 @@ export default async function BlogPage() {
                 {posts?.map((post) => {
                     return <Post key={post.id} post={post} />;
                 })}
-            </div>
+            </div>  
         </div>
     )
 }
