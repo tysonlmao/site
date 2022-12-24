@@ -12,17 +12,14 @@ async function getHypixelStats() {
     // .then((data) => console.log(data));
     .then(({ player }) => {
         let playerKarma = player.karma
-        console.log(playerKarma)
     })
 }
 
 export default async function StatsPage() {
-    const stats = getHypixelStats();
-    // console.log(stats);
     return(
         <div>
             <div className="container"> 
-                <p className="center">Site is under construction!</p>   
+                {/* <p>{playerKarma}</p> */}
             </div>
         </div>
     )
