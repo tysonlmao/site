@@ -1,4 +1,4 @@
-import './global.css';
+import '../lib/css/global.css';
 import Nav from '../components/navigation.js'
 
 export default function RootLayout({ children }) {
