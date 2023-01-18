@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import '../lib/css/global.css';
 import Nav from '../components/navigation.js'
 

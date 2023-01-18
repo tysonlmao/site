@@ -10,8 +10,6 @@ export default function Nav() {
                 <nav className="front">
                     <ul>
                         <li><Link href="/">Home</Link></li>
-                        <li><Link href="/stats">Hypixel</Link></li>
-                        <li><Link href="/posts">Blog</Link></li>
                     </ul>
                 </nav>
             </header>
