@@ -1,22 +1,9 @@
+import 'bootstrap/dist/css/bootstrap.css'
 import '../lib/css/front.css';
-import Link from 'next/link';
+import '../lib/css/global.css';
 
-export default function HomePage() {
+export default function Home() {
     return(
-        <div className="front-container">
-            <header>
-            <nav className="nav-container">
-                    <ul>
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="/stats">Hypixel</Link></li>
-                        <li><Link href="/posts">Blog</Link></li>
-                    </ul>
-                </nav>
-            <div className="featured">
-                <div className="featured-content">verified computer abuser</div>
-            </div>
-            </header>
-            
-        </div>
-    );
+        <h1>site is under development.</h1>
+    )
 }
