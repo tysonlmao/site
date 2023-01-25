@@ -1,5 +1,6 @@
 import './time.css';
 import 'bootstrap/dist/css/bootstrap.css'
+import React from 'react';
 
 export default function Time() {
 
