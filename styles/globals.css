@@ -1,3 +1,20 @@
 :root {
-  /* root css */
+  --primary-color: #fdadbe;
+  --primary-higher: #f87591;
+}
+
+* {
+  background-color: var(--primary-color);
+}
+
+/* navigation.module.css */
+.nav-root {
+  background-color: black;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-nav {
+  margin: 1.2rem;
+  font-family: "Roboto Mono" monospace;
 }
