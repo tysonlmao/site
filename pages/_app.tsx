@@ -1,7 +1,5 @@
 import localFont from '@next/font/local'
 
-const RobotoMono = localFont({ src: '../lib/fonts/RobotoMono.woff' });
-
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
 

@@ -1,20 +1,50 @@
 :root {
   --primary-color: #fdadbe;
   --primary-higher: #f87591;
+  --secondary-color: #221c24;
 }
 
 * {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.page-content {
+  color: white;
+}
+
+/* ./pages/index.tsx css */
+.h2-center {
+  text-align: center;
+  margin-top: 8rem;
+  font-family: "Martian Mono", monospace;
+}
+
+.h2-center > h2 {
+  font-size: 50px;
 }
 
 /* navigation.module.css */
 .nav-root {
-  background-color: black;
-  margin: 0 !important;
-  padding: 0 !important;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.left-nav {
+  display: flex;
+  margin: 5px;
 }
 
 .navbar-nav {
-  margin: 1.2rem;
+  margin: 2rem;
   font-family: "Roboto Mono" monospace;
+}
+
+.compass {
+  fill: white;
+  /* tatp has a dirty mind */
+  width: 50px;
+  height: 50px;
 }

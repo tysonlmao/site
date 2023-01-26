@@ -13,8 +13,9 @@ export default function Home() {
       <div className="page-content">
         {/* nya */}
         <Nav/>
-        <br />
-        <p>page content</p>
+        <div className="h2-center">
+          <h2>tysonlmao</h2>
+        </div>
       </div>
     </>
   )
