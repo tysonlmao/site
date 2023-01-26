@@ -1,5 +1,5 @@
 import '../styles/Navigation.module.css';
-import Compass from 'components/svgs/compass.svg';
+import Compass from '../public/compass.svg';
 
 export default function Navigation() {
     return(
@@ -14,7 +14,7 @@ export default function Navigation() {
             <div className="right-nav">
                 <div className="navbar-nav">
                     <li>
-                        <a href="#idklmao"><Compass className="compass"/></a>
+                        <a href="#"><Compass className="icon-svg"/></a>
                     </li>
                 </div>
             </div>

@@ -79,9 +79,15 @@
   font-family: "Roboto Mono" monospace;
 }
 
-.compass {
+.icon-svg {
   fill: white;
   /* tatp has a dirty mind */
   width: 50px;
   height: 50px;
+  cursor: pointer;
+}
+
+/* ./components/stats.tsx */
+.db {
+  justify-content: center;
 }
