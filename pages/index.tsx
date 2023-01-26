@@ -2,8 +2,13 @@ import Head from 'next/head';
 import '../styles/Home.module.css';
 import Nav from '../components/nav';
 import ChevronDown from '../public/chevron-down.svg';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [show, setShow] = useState(false);
+  function toggle(){
+    setShow(!show);
+  }
   return (
     <>
       <Head>
@@ -21,7 +26,11 @@ export default function Home() {
           <button className="glow-button"><a href="https://twitter.com/tysonlmfao" target="_blank">Twitter</a></button>
           <button className="glow-button"><a href="#">Discord</a></button>
           <br className="spacer-2rem"/>
-          <ChevronDown class="compass"/>
+          <button onClick={toggle}><ChevronDown class="compass"/></button>
+        </div>
+
+        <div className="stats" style={{display: show?"block":"none"}}>
+          <h3>tatp kinda hot tho</h3>
         </div>
       </div>
     </>
