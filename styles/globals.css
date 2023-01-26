@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #fdadbe;
+  --primary-higher: #f87591;
+  --secondary-color: #221c24;
+}
+
+* {
+  background-color: var(--secondary-color);
+}
+
+.page-content {
+  color: white;
+}
+
+/* ./pages/index.tsx css */
+.h2-center {
+  text-align: center;
+  margin-top: 8rem;
+  font-family: "Martian Mono", monospace;
+}
+
+.h2-center > h2 {
+  font-size: 50px;
+}
+
+.glow-button {
+  width: 130px;
+  height: 52px;
+  padding: 10px 25px;
+  border: 2px solid #f87591;
+  color: white;
+  border-radius: 0.7rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.glow-button:hover {
+  transition: all 0.3s ease;
+  box-shadow: -3px -3px 20px 0px #f87591, 0px 0px 3px 3px #f87591,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+
+/* end ./pages/index.tsx css */
+
+/* navigation.module.css */
+.nav-root {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.left-nav {
+  display: flex;
+  margin: 5px;
+}
+
+.navbar-nav {
+  margin: 2rem;
+  font-family: "Roboto Mono" monospace;
+}
+
+.compass {
+  fill: white;
+  /* tatp has a dirty mind */
+  width: 50px;
+  height: 50px;
+}

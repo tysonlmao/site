@@ -1,0 +1,9 @@
+.nav-root {
+  background-color: black;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-nav {
+  padding: 4rem;
+}
