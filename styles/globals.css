@@ -19,6 +19,18 @@
   font-family: "Martian Mono", monospace;
 }
 
+.h2-center button {
+  display: block !important;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.h2-center button > a {
+  text-decoration: none;
+  color: white;
+}
+
 .h2-center > h2 {
   font-size: 50px;
 }
@@ -38,7 +50,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  display: inline-block;
 }
 
 .glow-button:hover {

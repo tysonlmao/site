@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import '../styles/Home.module.css';
 import Nav from '../components/nav';
+import ChevronDown from '../public/chevron-down.svg';
 
 export default function Home() {
   return (
@@ -16,7 +17,11 @@ export default function Home() {
         <div className="h2-center">
           <h2>tysonlmao</h2>  
           <br />
-          <button className="glow-button">GitHub</button>
+          <button className="glow-button"><a href="https://github.com/tysonlmao" target="_blank">GitHub</a></button>
+          <button className="glow-button"><a href="https://twitter.com/tysonlmfao" target="_blank">Twitter</a></button>
+          <button className="glow-button"><a href="#">Discord</a></button>
+          <br />
+          <ChevronDown class="compass"/>
         </div>
       </div>
     </>
