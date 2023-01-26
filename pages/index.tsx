@@ -20,7 +20,7 @@ export default function Home() {
           <button className="glow-button"><a href="https://github.com/tysonlmao" target="_blank">GitHub</a></button>
           <button className="glow-button"><a href="https://twitter.com/tysonlmfao" target="_blank">Twitter</a></button>
           <button className="glow-button"><a href="#">Discord</a></button>
-          <br />
+          <br className="spacer-2rem"/>
           <ChevronDown class="compass"/>
         </div>
       </div>
