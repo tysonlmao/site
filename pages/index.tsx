@@ -14,7 +14,9 @@ export default function Home() {
         {/* nya */}
         <Nav/>
         <div className="h2-center">
-          <h2>tysonlmao</h2>
+          <h2>tysonlmao</h2>  
+          <br />
+          <button className="glow-button">GitHub</button>
         </div>
       </div>
     </>
