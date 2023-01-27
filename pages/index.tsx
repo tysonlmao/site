@@ -16,7 +16,9 @@ export default function Home() {
         <div className="h2-center">
           <h2>tysonlmao</h2>  
           <br />
-          <button className="glow-button">GitHub</button>
+          <h3>This site is in development. Visit <a href="https://beta.tysonlmao.dev">beta.tysonlmao.dev</a> for the preview build.</h3>
+          <br />
+          {/* <button className="glow-button">GitHub</button> */}
         </div>
       </div>
     </>
