@@ -1,5 +1,3 @@
-import localFont from '@next/font/local'
-
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
