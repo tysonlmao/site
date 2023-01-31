@@ -14,51 +14,11 @@ export async function getStaticProps() {
 }
 
 export default function Home() {
-  const [displayname, setDisplayname] = useState('');
   const [show, setShow] = useState(false);
   function toggle(){
     setShow(!show);
   }
 
-  useEffect(() => {
-
-    let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      if(process.env.HYPIXEL_API_KEY) {
-        headers.append('X-GQL-Token', process.env.HYPIXEL_API_KEY);
-      }
-
-    async function fetchData() {
-      const endpoint = process.env.HYPIXEL_PLAYER_ENDPOINT as string;
-      const graphQLClient = new GraphQLClient(endpoint);
-      graphQLClient.setHeader('X-GQL-Token', process.env.HYPIXEL_API_KEY as string);
-    
-      const query = gql`
-      query player($key: String!, $uuid: String!) {
-        player(key: $key, uuid: $uuid) {
-          
-        }
-      }
-      `;
-    
-      const variables = {
-        key: process.env.HYPIXEL_API_KEY,
-        uuid: process.env.HYPIXEL_UUID
-      };
-
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers, 
-        body: JSON.stringify({
-          query,
-          variables
-        })
-      });
-      const data = await res.json();
-      setDisplayname(data.player.displayname);
-    }
-    fetchData();
-  }, [])
   return (
     <>
       <Head>
@@ -79,7 +39,6 @@ export default function Home() {
 
         <div className="stats" style={{display: show?"block":"none"}}>
           <Stats />
-          <div>{displayname}</div>
         </div>
       </div>
     </>
