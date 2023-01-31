@@ -9,6 +9,7 @@ export default function Navigation() {
                     <li className="nav-item">
                         <a className="nav-link" href="/">tysonlmao.dev</a>
                     </li>
+                    
                 </ul>
             </div>
             <div className="right-nav">

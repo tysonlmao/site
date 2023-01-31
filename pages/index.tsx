@@ -4,8 +4,6 @@ import Nav from '../components/nav';
 import ChevronDown from '../public/chevron-down.svg';
 import React, { useState, useEffect } from 'react';
 import Stats from '../components/stats';
-import { GetStaticProps, NextPage } from 'next';
-import {GraphQLClient, gql} from 'graphql-request';
 
 export async function getStaticProps() {
   return {
