@@ -23,25 +23,25 @@ export default function Bowl() {
                             <tr>
                                 <th>1</th>
                                 <th>Tyson</th>
-                                <th>2</th>
+                                <th>3</th>
                                 <th>1</th>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <th>Barrie</th>
+                                <th>6</th>
                                 <th>3</th>
-                                <th>2</th>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <th>Hans</th>
-                                <th>4</th>
-                                <th>2</th>
+                                <th>6</th>
+                                <th>3</th>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <th>Tarn</th>
-                                <th>5</th>
+                                <th>6</th>
                                 <th>3</th>
                             </tr>
                             </tbody>
