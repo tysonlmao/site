@@ -2,8 +2,8 @@ import Head from 'next/head';
 import '../styles/Home.module.css';
 import Nav from '../components/nav';
 import ChevronDown from '../public/chevron-down.svg';
+import Database from '../public/database.svg';
 import React, { useState, useEffect } from 'react';
-import Stats from '../components/stats';
 
 export async function getStaticProps() {
   return {
@@ -36,7 +36,14 @@ export default function Home() {
         </div>
 
         <div className="stats" style={{display: show?"block":"none"}}>
-          <Stats />
+          <div className="separator-svg">
+            <Database className="db icon-svg"/> 
+          </div>
+          <div className="container align-t">
+            <div className="row">
+              <div className="col">a</div>
+            </div>
+          </div>
         </div>
       </div>
     </>
