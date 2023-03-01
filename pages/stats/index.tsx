@@ -3,12 +3,17 @@ import Nav from "../../components/nav";
 import { useState, useEffect } from "react";
 import Skeleton from "../../components/Skeleton";
 import config from "../../config.json";
-
+import NetworkLevel from "../../components/networkLevel";
+import PlayerFirstLogin from "../../components/PlayerFirstLogin"
 const API_KEY = config.API_KEY;
 
 interface PlayerData {
   player: {
     displayname: string;
+    karma: number;
+    networkExp: number;
+    achievementPoints: number;
+    firstLogin: number;
     stats: {
       Bedwars: {
         wins_bedwars: number;
@@ -23,6 +28,7 @@ interface PlayerData {
     };
   };
 }
+
 
 export default function Stats() {
   const [data, setData] = useState<PlayerData>();
@@ -63,7 +69,29 @@ export default function Stats() {
       <Nav />
       <div className="page">
         <br />
-          <div className="container">
+          <div className="row">
+            <div className="col">
+        <div className="card stat-card">
+          {data ? (
+            <div className="row text-center justify-content-center">
+                <h2>{data.player.displayname}</h2>
+              <div className="col">
+                <h3 className="skeleton-text">Network Level</h3>
+                <NetworkLevel networkExp={data.player.networkExp} />
+                <h3 className="skeleton-text">Karma</h3>
+                <h4 className="skeleton-text">{data.player.karma}</h4>
+                <h3 className="skeleton-text">AP</h3>
+                <h4 className="skeleton-text">{data.player.achievementPoints}</h4>
+                <h3 className="skeleton-text">First Login</h3>
+                <PlayerFirstLogin firstLogin={data.player.firstLogin}/>
+              </div>
+            </div>
+          ) : (
+            <Skeleton/>
+          )}
+          </div>
+            </div>
+            <div className="col">
         <div className="card stat-card">
           {data ? (
             <div className="row text-center justify-content-center">
@@ -93,6 +121,69 @@ export default function Stats() {
             <Skeleton/>
           )}
           </div>
+            </div>
+            <div className="col">
+        <div className="card stat-card">
+          {data ? (
+            <div className="row text-center justify-content-center">
+                <h2>{data.player.displayname}</h2>
+              <div className="col-5">
+                <h3 className="skeleton-text">Wins</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.wins_bedwars}</h4>
+                <h3 className="skeleton-text">Finals</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.final_kills_bedwars}</h4>
+                <h3 className="skeleton-text">Beds</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.beds_broken_bedwars}</h4>
+                <h3 className="skeleton-text">Kills</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.kills_bedwars}</h4>
+              </div>
+              <div className="col-5">
+                <h3 className="skeleton-text">WLR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</h4>
+                <h3 className="skeleton-text">FKDR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</h4>
+                <h3 className="skeleton-text">BBLR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.beds_broken_bedwars / data.player.stats.Bedwars.beds_lost_bedwars * 100) / 100}</h4>
+                <h3 className="skeleton-text">KDR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.kills_bedwars / data.player.stats.Bedwars.deaths_bedwars * 100) / 100}</h4>
+              </div>
+            </div>
+          ) : (
+            <Skeleton/>
+          )}
+          </div>
+            </div>
+            <div className="col">
+        <div className="card stat-card">
+          {data ? (
+            <div className="row text-center justify-content-center">
+                <h2>{data.player.displayname}</h2>
+              <div className="col-5">
+                <h3 className="skeleton-text">Wins</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.wins_bedwars}</h4>
+                <h3 className="skeleton-text">Finals</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.final_kills_bedwars}</h4>
+                <h3 className="skeleton-text">Beds</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.beds_broken_bedwars}</h4>
+                <h3 className="skeleton-text">Kills</h3>
+                <h4 className="skeleton-text">{data.player.stats.Bedwars.kills_bedwars}</h4>
+              </div>
+              <div className="col-5">
+                <h3 className="skeleton-text">WLR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</h4>
+                <h3 className="skeleton-text">FKDR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</h4>
+                <h3 className="skeleton-text">BBLR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.beds_broken_bedwars / data.player.stats.Bedwars.beds_lost_bedwars * 100) / 100}</h4>
+                <h3 className="skeleton-text">KDR</h3>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.kills_bedwars / data.player.stats.Bedwars.deaths_bedwars * 100) / 100}</h4>
+              </div>
+            </div>
+          ) : (
+            <Skeleton/>
+          )}
+          </div>
+            </div>
           </div>
         </div>
     </>
