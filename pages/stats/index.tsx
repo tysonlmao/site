@@ -48,15 +48,29 @@ interface PlayerData {
   };
 }
 
-
 export default function Stats() {
   const [data, setData] = useState<PlayerData>();
   const [isLoading, setIsLoading] = useState(true);
+  const [searchInput, setSearchInput] = useState("");
+
+  async function handleSearch() {
+    if (!isValidUUID(searchInput)) {
+      console.error(`Invalid UUID: ${searchInput}`)
+      return;
+    } 
+
+    await getStats(searchInput);
+  }
+
+  function isValidUUID(uuid: string) {
+    const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+    return uuidRegex.test(uuid);
+}
 
   async function getStats(id: string) {
     setIsLoading(true);
     try {
-      let uuid = id;
+      let uuid = searchInput;
 
       const res = await fetch(
         `https://api.hypixel.net/player?key=${API_KEY}&uuid=${uuid}`
@@ -66,7 +80,7 @@ export default function Stats() {
         throw new Error(`Error`);
       }
       const data = await res.json();
-      setIsLoading
+      setIsLoading(false)
       if (!data.success) {
         throw new Error(`API error : ${data.cause || "idk?"}`);
       }
@@ -80,14 +94,25 @@ export default function Stats() {
   }
 
   useEffect(() => {
-    getStats("f138952a-3492-4573-80db-d928fd3cde33");
-  }, []);
+    handleSearch();
+  }, [searchInput]);
 
   return (
     <>
       <Nav />
       <div className="page">
         <br />
+          <div className="container">
+            <form>
+          <input
+            type="text"
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <button onClick={() => getStats(searchInput)}>Search</button>
+            </form>
+          </div>
+
           <div className="row">
             <div className="col">
         <div className="card stat-card">
