@@ -5,6 +5,7 @@ import Skeleton from "../../components/Skeleton";
 import config from "../../config.json";
 import NetworkLevel from "../../components/networkLevel";
 import PlayerFirstLogin from "../../components/PlayerFirstLogin"
+import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 const API_KEY = config.API_KEY;
 
 interface PlayerData {
@@ -24,6 +25,24 @@ interface PlayerData {
         kills_bedwars: number;
         deaths_bedwars: number;
         losses_bedwars: number;
+        Experience: number;
+      },
+      Duels: {
+        wins: number;
+        losses: number;
+        kills: number;
+        deaths: number;
+        best_overall_winstreak: number;
+        current_overall_winstreak: number;
+        coins: number;
+      },
+      SkyWars: {
+        wins: number;
+        losses: number;
+        kills: number;
+        lastMode: string;
+        win_streak: number;
+        coins: number;
       };
     };
   };
@@ -95,7 +114,8 @@ export default function Stats() {
         <div className="card stat-card">
           {data ? (
             <div className="row text-center justify-content-center">
-                <h2>{data.player.displayname}</h2>
+                <h2>BedWars</h2>
+                <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience}/>
               <div className="col-5">
                 <h3 className="skeleton-text">Wins</h3>
                 <h4 className="skeleton-text">{data.player.stats.Bedwars.wins_bedwars}</h4>
@@ -126,27 +146,26 @@ export default function Stats() {
         <div className="card stat-card">
           {data ? (
             <div className="row text-center justify-content-center">
-                <h2>{data.player.displayname}</h2>
+                <h2>Duels</h2>
               <div className="col-5">
                 <h3 className="skeleton-text">Wins</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.wins_bedwars}</h4>
-                <h3 className="skeleton-text">Finals</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.final_kills_bedwars}</h4>
-                <h3 className="skeleton-text">Beds</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.beds_broken_bedwars}</h4>
+                <h4 className="skeleton-text">{data.player.stats.Duels.wins}</h4>
                 <h3 className="skeleton-text">Kills</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.kills_bedwars}</h4>
+                <h4 className="skeleton-text">{data.player.stats.Duels.kills}</h4>
+                <h3 className="skeleton-text">BWS</h3>
+                <h4 className="skeleton-text">{data.player.stats.Duels.best_overall_winstreak}</h4>
               </div>
               <div className="col-5">
                 <h3 className="skeleton-text">WLR</h3>
-                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</h4>
-                <h3 className="skeleton-text">FKDR</h3>
-                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</h4>
-                <h3 className="skeleton-text">BBLR</h3>
-                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.beds_broken_bedwars / data.player.stats.Bedwars.beds_lost_bedwars * 100) / 100}</h4>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Duels.wins / data.player.stats.Duels.losses * 100) / 100}</h4>
                 <h3 className="skeleton-text">KDR</h3>
-                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.kills_bedwars / data.player.stats.Bedwars.deaths_bedwars * 100) / 100}</h4>
+                <h4 className="skeleton-text">{Math.round(data.player.stats.Duels.kills / data.player.stats.Duels.deaths * 100) /100}</h4>
+                <h3 className="skeleton-text">CWS</h3>
+                <h4 className="skeleton-text">?</h4>  {/* not sure how to implement */}
               </div>
+              <h3 className="skeleton-text">Coins</h3>
+              <h4 className="skeleton-text">{
+              data.player.stats.Duels.coins}</h4>
             </div>
           ) : (
             <Skeleton/>
@@ -157,27 +176,25 @@ export default function Stats() {
         <div className="card stat-card">
           {data ? (
             <div className="row text-center justify-content-center">
-                <h2>{data.player.displayname}</h2>
+                <h2>SkyWars</h2>
               <div className="col-5">
                 <h3 className="skeleton-text">Wins</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.wins_bedwars}</h4>
-                <h3 className="skeleton-text">Finals</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.final_kills_bedwars}</h4>
-                <h3 className="skeleton-text">Beds</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.beds_broken_bedwars}</h4>
+                <h4 className="skeleton-text">{data.player.stats.SkyWars.wins}</h4>
                 <h3 className="skeleton-text">Kills</h3>
-                <h4 className="skeleton-text">{data.player.stats.Bedwars.kills_bedwars}</h4>
+                <h4 className="skeleton-text">{data.player.stats.SkyWars.kills}</h4>
+                <h4 className="skeleton-text">Last</h4>
+                <h3 className="skeleton-text">{data.player.stats.SkyWars.lastMode}</h3>
               </div>
               <div className="col-5">
                 <h3 className="skeleton-text">WLR</h3>
                 <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</h4>
                 <h3 className="skeleton-text">FKDR</h3>
                 <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</h4>
-                <h3 className="skeleton-text">BBLR</h3>
-                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.beds_broken_bedwars / data.player.stats.Bedwars.beds_lost_bedwars * 100) / 100}</h4>
-                <h3 className="skeleton-text">KDR</h3>
-                <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.kills_bedwars / data.player.stats.Bedwars.deaths_bedwars * 100) / 100}</h4>
+                <h3 className="skeleton-text">WS</h3>
+                <h4 className="skeleton-text">{data.player.stats.SkyWars.win_streak}</h4>
               </div>
+              <h3 className="skeleton-text">Coins</h3>
+              <h4 className="skeleton-text">{data.player.stats.SkyWars.coins}</h4>
             </div>
           ) : (
             <Skeleton/>
