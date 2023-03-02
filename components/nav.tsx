@@ -17,6 +17,9 @@ export default function Navigation() {
                     <li>
                         <a href="#"><Compass className="icon-svg"/></a>
                     </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
                 </div>
             </div>
         </div>

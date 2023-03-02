@@ -4,6 +4,8 @@ import Nav from '../components/nav';
 import ChevronDown from '../public/chevron-down.svg';
 import Database from '../public/database.svg';
 import React, { useState, useEffect } from 'react';
+import { initFirebase } from '../firebase/firebase'
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 
 export async function getStaticProps() {
   return {
@@ -15,6 +17,15 @@ export default function Home() {
   const [show, setShow] = useState(false);
   function toggle(){
     setShow(!show);
+  }
+
+  initFirebase();
+  const provider = new GoogleAuthProvider();
+  const auth = getAuth();
+
+  const signIn = async () => {
+    const result = await signInWithPopup(auth, provider);
+    console.log(result.user)
   }
 
   return (
