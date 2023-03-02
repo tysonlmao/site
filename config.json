@@ -1,0 +1,12 @@
+{
+    "API_KEY": "601d75a0-84c0-40ad-b2d7-6b598e0d48a2",
+    "firebase": {
+        "apiKey": "AIzaSyA4yaw0TudnKGQ-Y3zD97XWe4h-BGxBvmc",
+        "authDomain": "tysonlmao-stats.firebaseapp.com",
+        "projectId": "tysonlmao-stats",
+        "storageBucket": "tysonlmao-stats.appspot.com",
+        "messagingSenderId": "314441773688",
+        "appId": "1:314441773688:web:8d8f966d85669cbe52738d",
+        "measurementId": "G-LGW7H85425"
+    }
+}
