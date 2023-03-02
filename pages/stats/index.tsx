@@ -9,7 +9,8 @@ import NetworkLevel from "../../components/networkLevel";
 import PlayerFirstLogin from "../../components/PlayerFirstLogin"
 import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
-const API_KEY = config.API_KEY;
+import { app } from "../../firebase/firebase";
+const API_KEY = process.env.NEXT_API_KEY
 
 interface PlayerData {
   player: {
@@ -59,10 +60,12 @@ export default function Stats() {
   async function getStats(id: string) {
     setIsLoading(true);
     try {
-      let uuid = id;
+      let API_KEY = process.env.NEXT_HYPIXEL_API_KEY;
+      let uuid = "f138952a-3492-4573-80db-d928fd3cde33";
+      console.log(uuid)
 
       const res = await fetch(
-        `https://api.hypixel.net/player?key=${API_KEY}&uuid=${uuid}`
+        `https://api.hypixel.net/player?key=${API_KEY}&uuid=${id}`
       );
       if (!res.ok) {
         // epic error handling
@@ -79,33 +82,31 @@ export default function Stats() {
       throw error;
     }
     // insert your hypixel api key inside the quotation marks
-    // let apiKey = "601d75a0-84c0-40ad-b2d7-6b598e0d48a2";
   }
 
   useEffect(() => {
   }, []);
 
   const router = useRouter()
-  const auth = getAuth();
+
+  const auth = getAuth(app);
   const [user, loading] = useAuthState(auth);
   
   if (loading) {
-    getStats("f138952a-3492-4573-80db-d928fd3cde33")
     return <div>Loading</div>
   }
   if (!user) {
-    router.push("/");
+    router.push("/login");
   }
-
-  const callApi = async () => {
-  }
-
+    // getStats("f138952a-3492-4573-80db-d928fd3cde33");
+  
+  
+  
   return (
     <>
       <Nav />
       <div>
         <button onClick={() =>  auth.signOut()} className="btn btn-primary">Sign out</button>
-        <button onClick={callApi}>fetch</button>
       </div>
       <div className="page">
         <br />

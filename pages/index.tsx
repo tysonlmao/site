@@ -43,18 +43,6 @@ export default function Home() {
           <button className="glow-button"><a href="https://twitter.com/tysonlmfao" target="_blank">Twitter</a></button>
           <button className="glow-button"><a href="#">Discord</a></button>
           <br className="spacer-2rem"/>
-          <a onClick={toggle}><ChevronDown className="button-reset icon-svg"/></a>
-        </div>
-
-        <div className="stats" style={{display: show?"block":"none"}}>
-          <div className="separator-svg">
-            <Database className="db icon-svg"/> 
-          </div>
-          <div className="container align-t">
-            <div className="row">
-              <div className="col">a</div>
-            </div>
-          </div>
         </div>
       </div>
     </>
