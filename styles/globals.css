@@ -71,27 +71,6 @@
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
 
-/* end ./pages/index.tsx css */
-
-/* navigation.module.css */
-.nav-root {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-family: "Roboto Mono", monospace;
-}
-
-.left-nav {
-  display: flex;
-  margin: 5px;
-}
-
-.navbar-nav {
-  margin: 2rem;
-  font-family: "Roboto Mono" monospace;
-}
-
 .icon-svg {
   fill: white;
   /* tatp has a dirty mind */

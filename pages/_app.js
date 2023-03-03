@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { pageview } from '../firebase/ga';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Script from 'next/script';
+
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -19,8 +22,11 @@ export default function App({ Component, pageProps }) {
     };
   }, [router.events]);
   return (
-    <Component {...pageProps} />
-  );
+    <>
+      <Component {...pageProps} />
+    </>
+  ); ``;
+
 
 
 }

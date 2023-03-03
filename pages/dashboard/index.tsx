@@ -104,7 +104,7 @@ export default function Stats() {
   
   return (
     <>
-      <Nav />
+      <Nav/>
       <div>
         <button onClick={() =>  auth.signOut()} className="btn btn-primary">Sign out</button>
       </div>
