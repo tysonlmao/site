@@ -1,5 +1,6 @@
-import '../styles/Navigation.module.css';
 import Compass from '../public/compass.svg';
+import { useAuthState } from "react-firebase-hooks/auth";
+
 
 export default function Navigation() {
     return(
