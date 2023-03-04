@@ -8,7 +8,7 @@ import PlayerFirstLogin from "../../components/PlayerFirstLogin"
 import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
 import { PlayerData } from '../../components/statsInterface';
-import styles from "../../styles/Stats.module.css"
+import styles from "../../styles/Stats.module.css";
 
 
 export default function Stats() {
