@@ -1,0 +1,54 @@
+.statcard {
+  width: 20rem;
+  font-family: "MinecraftiaRegular", monospace;
+  font-weight: normal;
+  font-style: normal;
+  border: none !important;
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+.skeleton {
+  background-color: #e1e1e1;
+  border-radius: 0.25rem;
+  animation: pulse 1.5s infinite;
+  margin: 1rem 0;
+  height: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skeleton-text {
+  font-family: "MinecraftiaRegular", monospace;
+}
+
+.skeleton-item {
+  border-radius: 4px;
+  height: 150px;
+  width: calc(
+    (100% - 60px) / 2
+  ); /* divide container into 2 columns with 20px gap */
+}
+
+@media (max-width: 768px) {
+  .skeleton-item {
+    height: 100px;
+    width: calc(
+      (100% - 40px) / 2
+    ); /* divide container into 2 columns with 10px gap */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
