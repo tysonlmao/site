@@ -39,13 +39,21 @@ export default function Home() {
         <div className="h2-center">
           <h2>tysonlmao</h2>  
           <br />
-          <h3>This site is in development. Visit <a href="https://beta.tysonlmao.dev">beta.tysonlmao.dev</a> for the preview build.</h3>
-          <br />
-          <button className="glow-button"><a href="https://github.com/tysonlmao" target="_blank">GitHub</a></button>
-          <button className="glow-button"><a href="https://twitter.com/tysonlmfao" target="_blank">Twitter</a></button>
-          <button className="glow-button"><a href="#">Discord</a></button>
+          <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <button className="btn glow-button"><a href="https://twitter.com/tysonlmfao" target="_blank">Twitter</a></button>
+            </div>
+            <div className="col">
+              <button className="btn glow-button"><a href="#">Discord</a></button>
+            </div>
+          <div className="col">
+          <button className="btn glow-button"><a href="https://github.com/tysonlmao" target="_blank">GitHub</a></button>
+          </div>
+          </div>
           <br className="spacer-2rem"/>
         </div>
+          </div>
       </div>
     </>
   )
