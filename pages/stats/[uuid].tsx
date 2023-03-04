@@ -22,14 +22,15 @@ export default function Stats() {
       let API_KEY = config.NEXT_HYPIXEL_API_KEY || process.env.NEXT_HYPIXEL_API_KEY;
   
       // Query Mojang API for UUID based on username
-      const mojangRes = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`, {
+      const mojangRes = await fetch(`https://api.ashcon.app/mojang/v2/user/${username}`, {
         mode: 'cors'
       });
       if (!mojangRes.ok) {
         throw new Error(`Error getting UUID from Mojang API: ${mojangRes.statusText}`);
       }
       const mojangData = await mojangRes.json();
-      const uuid = mojangData.id;
+      const uuid = mojangData.uuid;
+
   
       // Query Hypixel API with UUID
       const hypixelRes = await fetch(`https://api.hypixel.net/player?key=${API_KEY}&uuid=${uuid}`);
