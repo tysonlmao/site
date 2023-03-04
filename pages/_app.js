@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import styles from '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { pageview } from '../firebase/ga';
@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
       pageview(url);
     };
 
+    require("bootstrap/dist/js/bootstrap");
     router.events.on("routeChangeComplete", handleRouteChange);
 
     return () => {
@@ -23,9 +24,11 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
   return (
     <>
-      <Component {...pageProps} />
+      <div className="pagecolor">
+        <Component {...pageProps} />
+      </div>
     </>
-  ); ``;
+  );;
 
 
 

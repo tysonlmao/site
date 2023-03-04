@@ -16,7 +16,8 @@
   margin-bottom: 70px;
 }
 
-* {
+.pagecolor {
+  height: 100vh;
   background-color: var(--secondary-color);
 }
 
