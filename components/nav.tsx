@@ -26,13 +26,16 @@ export default function Navigation() {
                     <div className={styles.navroot}>
                         <div className="row">
                             <div className="col">
-                                <a href="/login" className={styles.link}>Sign in</a>
+                                <a href="/stats" className={styles.link}>Stats</a>
+                            </div>
+                            <div className="col">
+                                <a href="/login" className={styles.link}>Login</a>
                             </div>
                             <div className="col">
                                 <div className="btn-group">
                                 <div className="dropdown">
                                     <button className="btn btn-primary dropdown-toggle styles.a" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown button
+                                        Account
                                     </button>
                                     <ul className="dropdown-menu">
                                         <li><span className="dropdown-item">Hi</span></li>

@@ -1,7 +1,5 @@
 import React from "react"
 import Navigation from "../../components/nav"
-
-import Nav from "../../components/nav";
 import { useState, useEffect } from "react";
 import Skeleton from "../../components/Skeleton";
 import config from "../../config.json";
@@ -9,7 +7,6 @@ import NetworkLevel from "../../components/networkLevel";
 import PlayerFirstLogin from "../../components/PlayerFirstLogin"
 import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
-import { app } from "../../firebase/firebase";
 import { PlayerData } from '../../components/statsInterface';
 import styles from "../../styles/Stats.module.css"
 
@@ -19,28 +16,40 @@ export default function Stats() {
   const [data, setData] = useState<PlayerData>();
   const [isLoading, setIsLoading] = useState(true);
 
-  async function getStats(uuid: string) {
+  async function getStats(username: string) {
     setIsLoading(true);
     try {
       let API_KEY = config.NEXT_HYPIXEL_API_KEY || process.env.NEXT_HYPIXEL_API_KEY;
-      const res = await fetch(
-        `https://api.hypixel.net/player?key=${API_KEY}&uuid=${uuid}`
-      );
-      if (!res.ok) {
-        // epic error handling
-        throw new Error(`Error`);
+  
+      // Query Mojang API for UUID based on username
+      const mojangRes = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`, {
+        mode: 'cors'
+      });
+      if (!mojangRes.ok) {
+        throw new Error(`Error getting UUID from Mojang API: ${mojangRes.statusText}`);
       }
-      const data = await res.json();
+      const mojangData = await mojangRes.json();
+      const uuid = mojangData.id;
+  
+      // Query Hypixel API with UUID
+      const hypixelRes = await fetch(`https://api.hypixel.net/player?key=${API_KEY}&uuid=${uuid}`);
+      if (!hypixelRes.ok) {
+        throw new Error(`Error getting stats from Hypixel API: ${hypixelRes.statusText}`);
+      }
+      const hypixelData = await hypixelRes.json();
       setIsLoading(false);
-      if (!data.success) {
-        throw new Error(`API error : ${data.cause || "idk?"}`);
+      if (!hypixelData.success) {
+        throw new Error(`API error : ${hypixelData.cause || "idk?"}`);
       }
-      setData(data);
+      setData(hypixelData);
     } catch (error) {
-      console.error(`Failed to retrieve stats for ${uuid}: ${error}`);
+      console.error(`Failed to retrieve stats for ${username}: ${error}`);
       throw error;
     }
   }
+  
+  
+  
 
   const router = useRouter();
   const { uuid } = router.query;
