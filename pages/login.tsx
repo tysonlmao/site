@@ -17,7 +17,7 @@ export default function userLogin() {
     }
 
     if (user) {
-        router.push("/stats")
+        router.push("/dashboard")
         return <div className='page'>Hi {user.displayName}</div>
     }
     const signIn = async () => {

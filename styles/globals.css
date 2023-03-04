@@ -16,7 +16,8 @@
   margin-bottom: 70px;
 }
 
-* {
+.pagecolor {
+  height: 100vh;
   background-color: var(--secondary-color);
 }
 
@@ -34,9 +35,7 @@
 
 .h2-center button {
   display: block !important;
-  justify-content: center;
   margin: 0 auto;
-  margin-top: 1rem;
 }
 
 .h2-center button > a {
@@ -56,40 +55,20 @@
   color: white;
   border-radius: 0.7rem;
   font-family: "Roboto Mono", monospace;
-  font-size: 20px;
-  text-align: center;
   font-weight: 400;
-  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+}
+
+.links > .col {
+  margin: 0 10px;
 }
 
 .glow-button:hover {
   transition: all 0.3s ease;
   box-shadow: -3px -3px 20px 0px #f87591, 0px 0px 3px 3px #f87591,
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-}
-
-/* end ./pages/index.tsx css */
-
-/* navigation.module.css */
-.nav-root {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-family: "Roboto Mono", monospace;
-}
-
-.left-nav {
-  display: flex;
-  margin: 5px;
-}
-
-.navbar-nav {
-  margin: 2rem;
-  font-family: "Roboto Mono" monospace;
 }
 
 .icon-svg {

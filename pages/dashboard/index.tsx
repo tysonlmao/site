@@ -1,6 +1,4 @@
-import React from "react"
-import Navigation from "../../components/nav"
-
+import "./Stats.module.css";
 import Nav from "../../components/nav";
 import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth"
@@ -12,18 +10,57 @@ import PlayerFirstLogin from "../../components/PlayerFirstLogin"
 import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
 import { app } from "../../firebase/firebase";
-import { PlayerData } from '../../components/statsInterface';
+const API_KEY = process.env.NEXT_API_KEY
+
+interface PlayerData {
+  player: {
+    displayname: string;
+    karma: number;
+    networkExp: number;
+    achievementPoints: number;
+    firstLogin: number;
+    stats: {
+      Bedwars: {
+        wins_bedwars: number;
+        final_kills_bedwars: number;
+        final_deaths_bedwars: number;
+        beds_broken_bedwars: number;
+        beds_lost_bedwars: number;
+        kills_bedwars: number;
+        deaths_bedwars: number;
+        losses_bedwars: number;
+        Experience: number;
+      },
+      Duels: {
+        wins: number;
+        losses: number;
+        kills: number;
+        deaths: number;
+        best_overall_winstreak: number;
+        current_overall_winstreak: number;
+        coins: number;
+      },
+      SkyWars: {
+        wins: number;
+        losses: number;
+        kills: number;
+        lastMode: string;
+        win_streak: number;
+        coins: number;
+      };
+    };
+  };
+}
+
 
 export default function Stats() {
-    // logic
-    const [data, setData] = useState<PlayerData>();
+  const [data, setData] = useState<PlayerData>();
   const [isLoading, setIsLoading] = useState(true);
 
   async function getStats(id: string) {
     setIsLoading(true);
     try {
       let API_KEY = process.env.NEXT_HYPIXEL_API_KEY;
-      console.log(API_KEY)
       let uuid = "f138952a-3492-4573-80db-d928fd3cde33";
       console.log(uuid)
 
@@ -48,15 +85,30 @@ export default function Stats() {
   }
 
   useEffect(() => {
-    let uuid = "364c34e6-7bd3-4c4a-8718-de6edca912da";
-    getStats(uuid)
   }, []);
-    // getStats("f138952a-3492-4573-80db-d928fd3cde33");
 
-    return (
-        <>
-            <Navigation/>
-            <div className="page">
+  const router = useRouter()
+
+  const auth = getAuth(app);
+  const [user, loading] = useAuthState(auth);
+  
+  if (loading) {
+    return <div>Loading</div>
+  }
+  if (!user) {
+    router.push("/login");
+  }
+    // getStats("f138952a-3492-4573-80db-d928fd3cde33");
+  
+  
+  
+  return (
+    <>
+      <Nav/>
+      <div>
+        <button onClick={() =>  auth.signOut()} className="btn btn-primary">Sign out</button>
+      </div>
+      <div className="page">
         <br />
           <div className="row">
             <div className="col">
@@ -173,6 +225,6 @@ export default function Stats() {
             </div>
           </div>
         </div>
-        </>
-    )
+    </>
+  );
 }
