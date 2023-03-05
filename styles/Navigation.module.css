@@ -18,3 +18,27 @@
   text-decoration: none;
   color: white;
 }
+
+.brand {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.brand:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.buttonlinks {
+  border-color: var(--primary-higher);
+  color: var(--primary-higher);
+}
+
+.buttonlinks:hover {
+  color: white;
+  background-color: var(--primary-higher);
+}
+
+.dropdown-stuff {
+  color: white;
+}

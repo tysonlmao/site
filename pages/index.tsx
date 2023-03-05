@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import '../styles/Home.module.css';
-import Nav from '../components/nav';
+// import Nav from '../components/nav';
 import ChevronDown from '../public/chevron-down.svg';
 import Database from '../public/database.svg';
 import React, { useState, useEffect } from 'react';
-import { initFirebase } from '../firebase/firebase'
+import { initFirebase } from '../config/firebase'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
+import Nav from "../components/nav";
 
 export async function getStaticProps() {
   return {
