@@ -16,6 +16,10 @@ export interface PlayerData {
           deaths_bedwars: number;
           losses_bedwars: number;
           Experience: number;
+          eight_one_final_kills_bedwars: number;
+          eight_one_final_deaths_bedwars: number;
+          eight_one_wins_bedwars: number;
+          eight_one_losses_bedwars: number;
         },
         Duels: {
           wins: number;

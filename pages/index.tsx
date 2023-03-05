@@ -7,7 +7,6 @@ import React, { useState, useEffect } from 'react';
 import { initFirebase } from '../config/firebase'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import Nav from "../components/nav";
-import Footer from '../components/footer';
 
 export async function getStaticProps() {
   return {
@@ -37,7 +36,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="page-content">
-        <Nav/>
         <div className="h2-center">
           <h2>tysonlmao</h2>  
           <br />

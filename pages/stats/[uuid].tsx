@@ -60,7 +60,6 @@ export default function Stats() {
 
     return (
         <>
-        <Navigation/>
         <div className="container-fluid">
         <div className={styles.title}>
           <h2 className={`${styles.title} text-center`}>{data?.player.displayname}</h2>
@@ -80,19 +79,47 @@ export default function Stats() {
         <div className={`${styles.accordion} accordion`} id="accordionExample">
           <div className={`${styles.accorditem} ${styles.accorditem1} accordion-item`}>
             <h2 className={`${styles.accordionhead} ${styles.accorditem1}accordion-header`} id="headingOne">
-              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button className={` ${styles.accordbutton} accordion-button`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 Bedwars
               </button>
             </h2>
             <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div className="accordion-body">
-              
+                <div className={`container-fluid statcontainer`}>
+                  {data && (
+                    <>
+                    <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience} />
+
+                    <div className="row text-center">
+                      <div className={`${styles.column} col`}></div>
+                      <div className={`${styles.column} col`}>Finals</div>
+                      <div className={`${styles.column} col`}>FKDR</div>
+                      <div className={`${styles.column} col`}>Wins</div>
+                      <div className={`${styles.column} col`}>WLR</div>
+                    </div>
+                    <div className="row text-center">
+                      <div className={`${styles.column} col`}>Overall</div>
+                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.final_kills_bedwars}</div>
+                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</div>
+                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.wins_bedwars}</div>
+                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</div>
+                    </div>
+                    <div className="row text-center">
+                      <div className={`${styles.column} col`}>Solo</div>
+                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_one_final_kills_bedwars}</div>
+                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_one_final_kills_bedwars / data.player.stats.Bedwars.eight_one_final_deaths_bedwars * 100) /100}</div>
+                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_one_wins_bedwars}</div>
+                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_one_wins_bedwars / data.player.stats.Bedwars.eight_one_losses_bedwars * 100) / 100}</div>
+                    </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </div>
           <div className={`${styles.accorditem} ${styles.accorditem2}accordion-item`}>
             <h2 className="accordion-header" id="headingTwo">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button className={` ${styles.accordbutton} accordion-button collapsed`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Duels
               </button>
             </h2>
@@ -104,7 +131,7 @@ export default function Stats() {
           </div>
           <div className={`${styles.accorditem} ${styles.accorditem3}accordion-item`}>
             <h2 className="accordion-header" id="headingThree">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button className={`${styles.accordbutton} accordion-button collapsed`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Skywars
               </button>
             </h2>

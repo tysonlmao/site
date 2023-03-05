@@ -27,7 +27,6 @@ export default function userLogin() {
     }
     return (
         <>
-            <Navigation/>
             <div className={styles.pagecontent}>
             <div className={styles.loginitem}>
                 <div className="justify-content-center">

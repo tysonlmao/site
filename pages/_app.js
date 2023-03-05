@@ -12,6 +12,7 @@ import 'firebase/compat/auth';
 
 import config from "../config.json";
 import Footer from '../components/footer';
+import Nav from "../components/nav";
 const firebaseConfig = config.firebase;
 
 export default function App({ Component, pageProps }) {
@@ -50,8 +51,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <div className="pagecolor">
+        <Nav />
         <Component {...pageProps} />
-        <Footer/>
+        <Footer />
       </div>
     </>
   );;

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/Stats.module.css"
 
 const EASY_LEVELS = 4;
 const EASY_LEVELS_XP = 7000;
@@ -54,5 +55,5 @@ function getLevelForExp(exp: number) {
 
 export default function PlayerBedwarsLevel({ experience }: { experience: number }) {
   const level = getLevelForExp(experience);
-  return <h3 className="skeleton-text">[{level}✫]</h3>;
+  return <h3 className={`${styles.statcontainer}`}>[{level}✫]</h3>;
 }
