@@ -112,7 +112,7 @@ export default function Stats() {
           <div className="row">
             <div className="col">
         <div className="card stat-card">
-          {data ? (
+          {data && (
             <div className="row text-center justify-content-center">
                 <h2>{data.player.displayname}</h2>
               <div className="col">
@@ -126,8 +126,7 @@ export default function Stats() {
                 <PlayerFirstLogin firstLogin={data.player.firstLogin}/>
               </div>
             </div>
-          ) : (
-            <Skeleton/>
+         
           )}
           </div>
             </div>
