@@ -1,7 +1,6 @@
 import React from "react"
 import Navigation from "../../components/nav"
 import { useState, useEffect } from "react";
-import Skeleton from "../../components/Skeleton";
 import config from "../../config.json";
 import NetworkLevel from "../../components/networkLevel";
 import PlayerFirstLogin from "../../components/PlayerFirstLogin"
@@ -62,12 +61,11 @@ export default function Stats() {
         <>
         <Navigation/>
         <div className={styles.page}>
-          <h2>{data?.player.displayname}</h2>
+          <h2 className="text-center">{data?.player.displayname}</h2>
         </div>
           <div className={`card ${styles.statcard}`}>
-            {data ? (
+            {data && (
               <div className="text-center">
-                  <h2>{data.player.displayname}</h2>
                   <h3 className="skeleton-text">Network Level</h3>
                   <NetworkLevel networkExp={data.player.networkExp} />
                   <h3 className="skeleton-text">Karma</h3>
@@ -77,8 +75,6 @@ export default function Stats() {
                   <h3 className="skeleton-text">First Login</h3>
                   <PlayerFirstLogin firstLogin={data.player.firstLogin}/>
                 </div>
-            ) : (
-              <Skeleton/>
             )}
           </div>
         </>
