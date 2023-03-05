@@ -60,6 +60,7 @@ export default function Stats() {
     return (
         <>
         <Navigation/>
+        <div className="container-fluid">
         <div className={styles.title}>
           <h2 className={`${styles.title} text-center`}>{data?.player.displayname}</h2>
         </div>
@@ -72,6 +73,7 @@ export default function Stats() {
                   <h3><span className={styles.statvalue}>{data.player.achievementPoints}</span> AP</h3>
                 </div>
             )}
+          </div>
           </div>
         </>
     )

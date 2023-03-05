@@ -25,7 +25,7 @@ export default function Document() {
                 }}>
                 </script>
             </Head>
-            <body>
+            <body className="fluid">
                 <Main />
                 <NextScript />
             </body>

@@ -2,6 +2,12 @@
   --primary-color: #fdadbe;
   --primary-higher: #f87591;
   --secondary-color: #221c24;
+  --title-font-size: clamp(75px, -0.875rem + 8.333vw, 3.5rem);
+}
+
+.fluid {
+  word-break: break-all;
+  overflow-x: hidden;
 }
 
 .text-fdadbe {
@@ -70,8 +76,6 @@
   box-shadow: -3px -3px 20px 0px #f87591, 0px 0px 3px 3px #f87591,
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
-
-
 
 /* separator-svg  */
 .separator-svg {
