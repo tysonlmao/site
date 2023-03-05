@@ -1,5 +1,6 @@
 import styles from '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import "../styles/fonts.css";
 
 import { pageview } from '../firebase/ga';
 import { useRouter } from 'next/router';

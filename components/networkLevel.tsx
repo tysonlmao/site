@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/Stats.module.css"
 
 export default function networkLevel({ networkExp }: { networkExp: number }) {
     const BASE = 10_000;
@@ -13,5 +14,5 @@ export default function networkLevel({ networkExp }: { networkExp: number }) {
     }
   
     const networkLevel = calculate(networkExp)
-    return <h4 className="skeleton-text">{networkLevel}</h4>
+    return <h3>Level <span className={styles.statvalue}>{networkLevel}</span></h3>
   }

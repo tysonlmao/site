@@ -60,20 +60,16 @@ export default function Stats() {
     return (
         <>
         <Navigation/>
-        <div className={styles.page}>
-          <h2 className="text-center">{data?.player.displayname}</h2>
+        <div className={styles.title}>
+          <h2 className={`${styles.title} text-center`}>{data?.player.displayname}</h2>
         </div>
           <div className={`card ${styles.statcard}`}>
             {data && (
-              <div className="text-center">
-                  <h3 className="skeleton-text">Network Level</h3>
+              <div className={` text-center ${styles.stats}`}>
                   <NetworkLevel networkExp={data.player.networkExp} />
-                  <h3 className="skeleton-text">Karma</h3>
-                  <h4 className="skeleton-text">{data.player.karma}</h4>
-                  <h3 className="skeleton-text">AP</h3>
-                  <h4 className="skeleton-text">{data.player.achievementPoints}</h4>
-                  <h3 className="skeleton-text">First Login</h3>
+                  <h3><span className={styles.statvalue}>{data.player.karma}</span> Karma</h3>
                   <PlayerFirstLogin firstLogin={data.player.firstLogin}/>
+                  <h3><span className={styles.statvalue}>{data.player.achievementPoints}</span> AP</h3>
                 </div>
             )}
           </div>
