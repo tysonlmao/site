@@ -51,6 +51,7 @@ export default function App({ Component, pageProps }) {
     <>
       <div className="pagecolor">
         <Component {...pageProps} />
+        <Footer/>
       </div>
     </>
   );;

@@ -76,14 +76,46 @@ export default function Stats() {
             )}
           </div>
         </div>
-        <div className="accordion">
-          <div className="acoordion-item">
-            <h2 className="accordion-header" id="bedwars">
-              <button className="accordion-button" type="button"></button>
+        <div className={`container-fluid ${styles.containaccord}`}>
+        <div className={`${styles.accordion} accordion`} id="accordionExample">
+          <div className={`${styles.accorditem} ${styles.accorditem1} accordion-item`}>
+            <h2 className={`${styles.accordionhead} ${styles.accorditem1}accordion-header`} id="headingOne">
+              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Bedwars
+              </button>
             </h2>
+            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+              
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.accorditem} ${styles.accorditem2}accordion-item`}>
+            <h2 className="accordion-header" id="headingTwo">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Duels
+              </button>
+            </h2>
+            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.accorditem} ${styles.accorditem3}accordion-item`}>
+            <h2 className="accordion-header" id="headingThree">
+              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Skywars
+              </button>
+            </h2>
+            <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div className="accordion-body">
+                
+              </div>
+            </div>
           </div>
         </div>
-        <Footer/>
+        </div>
         </>
     )
 }
