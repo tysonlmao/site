@@ -68,9 +68,9 @@ export default function Stats() {
             {data && (
               <div className={` text-center ${styles.stats}`}>
                   <NetworkLevel networkExp={data.player.networkExp} />
-                  <h3><span className={styles.statvalue}>{data.player.karma}</span> Karma</h3>
+                  <h3><span className={styles.statvalue}>{data.player.karma.toLocaleString()}</span> Karma</h3>
                   <PlayerFirstLogin firstLogin={data.player.firstLogin}/>
-                  <h3><span className={styles.statvalue}>{data.player.achievementPoints}</span> AP</h3>
+                  <h3><span className={styles.statvalue}>{data.player.achievementPoints.toLocaleString()}</span> AP</h3>
                 </div>
             )}
           </div>
