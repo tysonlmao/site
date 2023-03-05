@@ -34,7 +34,7 @@ export default function Stats() {
         <div className="row align-items-center justify-content-center">
         <div className="col-md-3">
             <p className={styles.text}>search for a players stats...</p>
-            <input type="text" className="form-control form-control-sm" placeholder="name" onKeyDown={handleKeyDown} onChange={handleChange} value={playerName} />
+            <input type="text" className={` ${styles.btnsearch} form-control form-control-sm`} placeholder="name" onKeyDown={handleKeyDown} onChange={handleChange} value={playerName} />
         </div>
         </div>
     </div>
