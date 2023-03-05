@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { initFirebase } from '../config/firebase'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import Nav from "../components/nav";
+import Footer from '../components/footer';
 
 export async function getStaticProps() {
   return {

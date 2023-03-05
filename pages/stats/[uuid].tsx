@@ -8,6 +8,7 @@ import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
 import { PlayerData } from '../../components/statsInterface';
 import styles from "../../styles/Stats.module.css";
+import Footer from "../../components/footer";
 
 
 export default function Stats() {
@@ -74,7 +75,15 @@ export default function Stats() {
                 </div>
             )}
           </div>
+        </div>
+        <div className="accordion">
+          <div className="acoordion-item">
+            <h2 className="accordion-header" id="bedwars">
+              <button className="accordion-button" type="button"></button>
+            </h2>
           </div>
+        </div>
+        <Footer/>
         </>
     )
 }

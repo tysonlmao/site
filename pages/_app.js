@@ -11,6 +11,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
 import config from "../config.json";
+import Footer from '../components/footer';
 const firebaseConfig = config.firebase;
 
 export default function App({ Component, pageProps }) {
