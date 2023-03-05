@@ -132,7 +132,7 @@ export default function Stats() {
             </div>
             <div className="col">
         <div className="card stat-card">
-          {data ? (
+          {data && (
             <div className="row text-center justify-content-center">
                 <h2>BedWars</h2>
                 <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience}/>
@@ -157,14 +157,12 @@ export default function Stats() {
                 <h4 className="skeleton-text">{Math.round(data.player.stats.Bedwars.kills_bedwars / data.player.stats.Bedwars.deaths_bedwars * 100) / 100}</h4>
               </div>
             </div>
-          ) : (
-            <Skeleton/>
           )}
           </div>
             </div>
             <div className="col">
         <div className="card stat-card">
-          {data ? (
+          {data && (
             <div className="row text-center justify-content-center">
                 <h2>Duels</h2>
               <div className="col-5">
@@ -187,14 +185,12 @@ export default function Stats() {
               <h4 className="skeleton-text">{
               data.player.stats.Duels.coins}</h4>
             </div>
-          ) : (
-            <Skeleton/>
           )}
           </div>
             </div>
             <div className="col">
         <div className="card stat-card">
-          {data ? (
+          {data && (
             <div className="row text-center justify-content-center">
                 <h2>SkyWars</h2>
               <div className="col-5">
@@ -216,8 +212,6 @@ export default function Stats() {
               <h3 className="skeleton-text">Coins</h3>
               <h4 className="skeleton-text">{data.player.stats.SkyWars.coins}</h4>
             </div>
-          ) : (
-            <Skeleton/>
           )}
           </div>
             </div>
