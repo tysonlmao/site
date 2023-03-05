@@ -18,3 +18,48 @@
   text-decoration: none;
   color: white;
 }
+
+.brand {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.brand:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.buttonlinks {
+  border-color: var(--primary-higher);
+  color: var(--primary-higher);
+}
+
+.buttonlinks:hover {
+  color: white;
+  background-color: var(--primary-higher);
+}
+
+.dropdown-stuff {
+  color: white;
+}
+
+.compass {
+  fill: white;
+  /* tatp has a dirty mind */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 1px;
+}
+
+.navbutton {
+  border: none;
+}
+
+.navbutton:hover {
+  border: none;
+}
+
+.navbutton:active {
+  border: none;
+}
