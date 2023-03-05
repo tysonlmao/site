@@ -3,7 +3,6 @@ import Nav from "../../components/nav";
 import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth"
 import { useAuthState } from "react-firebase-hooks/auth";
-import Skeleton from "../../components/Skeleton";
 import config from "../../config.json";
 import NetworkLevel from "../../components/networkLevel";
 import PlayerFirstLogin from "../../components/PlayerFirstLogin"
