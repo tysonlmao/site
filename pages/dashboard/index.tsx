@@ -8,7 +8,6 @@ import NetworkLevel from "../../components/networkLevel";
 import PlayerFirstLogin from "../../components/PlayerFirstLogin"
 import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
-import { app } from "../../firebase/firebase";
 const API_KEY = process.env.NEXT_API_KEY
 
 interface PlayerData {
@@ -86,17 +85,6 @@ export default function Stats() {
   useEffect(() => {
   }, []);
 
-  const router = useRouter()
-
-  const auth = getAuth(app);
-  const [user, loading] = useAuthState(auth);
-  
-  if (loading) {
-    return <div>Loading</div>
-  }
-  if (!user) {
-    router.push("/login");
-  }
     // getStats("f138952a-3492-4573-80db-d928fd3cde33");
   
   
@@ -104,7 +92,7 @@ export default function Stats() {
   return (
     <>
       <div>
-        <button onClick={() =>  auth.signOut()} className="btn btn-primary">Sign out</button>
+        <button className="btn btn-primary">Sign out</button>
       </div>
       <div className="page">
         <br />

@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { initFirebase } from '../config/firebase'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import Nav from "../components/nav";
+import Coffee from "../components/coffee"
 
 export async function getStaticProps() {
   return {
@@ -53,6 +54,9 @@ export default function Home() {
           </div>
           <br className="spacer-2rem"/>
         </div>
+          </div>
+          <div className="stripe">
+            <Coffee/>
           </div>
       </div>
     </>

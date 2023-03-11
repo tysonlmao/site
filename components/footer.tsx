@@ -10,7 +10,7 @@ export default function Footer() {
                         <p className={`${styles.text} text-center`}>Copyright &copy; 2023 <span className={styles.other}>tysonlmao</span></p>
                 </div>
                 <div className="col-md-6 text-right">
-                        <p className={`${styles.text} text-center`}>Engineered by <a></a><i>image</i><span className={styles.other}>Direct</span></p>
+                        <p className={`${styles.text} text-center`}>Engineered by   <i>image</i><span className={styles.other}>Direct</span></p>
                     </div>
                 </div>
             </div>

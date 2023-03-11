@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Stats.module.css"
 
 const EASY_LEVELS = 4;
@@ -53,7 +53,36 @@ function getLevelForExp(exp: number) {
   return level + Math.floor(expWithoutPrestiges / 5000);
 }
 
+function PlayerLevel({ experience }: { experience: number}) {
+  const [level, setLevel] = useState(getLevelForExp(experience));
+
+  useEffect(() => {
+    setLevel(getLevelForExp(experience));
+  }, [experience]);
+
+  // const prestigeColors = [
+  //   '#AAAAAA',    // prestige 0-99
+  //   '#FFFFFF',  // prestige 100-199
+  //   '#FFAA00',   // prestige 200-299
+  //   '#55FFFF', // prestige 300-399
+  //   '#00AA00', // prestige 400-499
+  //   '#00AAAA', // prestige 500-599`
+  //   '#AA0000', // prestige 600-699
+  //   '#FF55FF', // prestige 700-799
+  // ];
+  
+
+  const levelElements = Array.from({ length: level}, (_, i) => {
+    const style = i % 100 === 0 ? { color: "rgb(255, 255, 255" } : { color: "rgb("}
+  })
+}
+
 export default function PlayerBedwarsLevel({ experience }: { experience: number }) {
   const level = getLevelForExp(experience);
-  return <h3 className={`${styles.statcontainer}`}>[{level}✫]</h3>;
+  console.log(level)
+  if (level >= 100) {
+    return (
+      <h3 className={`${styles.statcontainer}`} style={{color: "rgb(255, 255 , 255)"}}>[{level}✫]</h3>
+      );
+    }
 }

@@ -87,7 +87,22 @@
 }
 
 .column {
-  font-family: "Roboto Mono";
+  font-family: "Minecraftia", sans-serif;
   color: white;
   font-size: 1rem;
+}
+
+.stattitle {
+  margin-bottom: 0;
+}
+
+.text {
+  font-family: "Minecraftia";
+  color: #f87591;
+  text-shadow: #000000 0px 1px 3px;
+  text-align: center;
+}
+
+.text > p {
+  margin-bottom: 0px;
 }

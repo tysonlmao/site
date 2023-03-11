@@ -15,6 +15,8 @@ export default function Stats() {
     // logic
   const [data, setData] = useState<PlayerData>();
   const [isLoading, setIsLoading] = useState(true);
+  const [bwOpen, bwSetOpen] = useState(false);
+  const toggleBW = () => bwSetOpen(!bwOpen);
 
   async function getStats(username: string) {
     setIsLoading(true);
@@ -89,27 +91,72 @@ export default function Stats() {
                   {data && (
                     <>
                     <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience} />
-
-                    <div className="row text-center">
-                      <div className={`${styles.column} col`}></div>
-                      <div className={`${styles.column} col`}>Finals</div>
-                      <div className={`${styles.column} col`}>FKDR</div>
-                      <div className={`${styles.column} col`}>Wins</div>
-                      <div className={`${styles.column} col`}>WLR</div>
+                    <div className={styles.text}>
+                      <p>Coins</p>
+                      <h3>{data.player.stats.Bedwars.coins}</h3>
                     </div>
-                    <div className="row text-center">
-                      <div className={`${styles.column} col`}>Overall</div>
-                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.final_kills_bedwars}</div>
-                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</div>
-                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.wins_bedwars}</div>
-                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</div>
+                    <div className={`row text-center ${styles.text}`}>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Wins</p>
+                        <h3>{data.player.stats.Bedwars.wins_bedwars}</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Final Kills</p>
+                        <h3>{data.player.stats.Bedwars.final_kills_bedwars}</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Beds Broken</p>
+                        <h3>{data.player.stats.Bedwars.beds_broken_bedwars}</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Kills</p>
+                        <h3>{data.player.stats.Bedwars.kills_bedwars}</h3>
+                      </div>
                     </div>
-                    <div className="row text-center">
-                      <div className={`${styles.column} col`}>Solo</div>
-                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_one_final_kills_bedwars}</div>
-                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_one_final_kills_bedwars / data.player.stats.Bedwars.eight_one_final_deaths_bedwars * 100) /100}</div>
-                      <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_one_wins_bedwars}</div>
-                      <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_one_wins_bedwars / data.player.stats.Bedwars.eight_one_losses_bedwars * 100) / 100}</div>
+                    <button onClick={toggleBW}>a</button>
+                    <div id="show-all">
+                      <div className="row text-center">
+                        <div className={`${styles.column} col`}></div>
+                        <div className={`${styles.column} col`}>Finals</div>
+                        <div className={`${styles.column} col`}>FKDR</div>
+                        <div className={`${styles.column} col`}>Wins</div>
+                        <div className={`${styles.column} col`}>WLR</div>
+                      </div>
+                      <div className="row text-center">
+                        <div className={`${styles.column} col`}>Overall</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.final_kills_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.wins_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</div>
+                      </div>
+                      <div className="row text-center">
+                        <div className={`${styles.column} col`}>Solo</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_one_final_kills_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_one_final_kills_bedwars / data.player.stats.Bedwars.eight_one_final_deaths_bedwars * 100) /100}</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_one_wins_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_one_wins_bedwars / data.player.stats.Bedwars.eight_one_losses_bedwars * 100) / 100}</div>
+                      </div>
+                      <div className="row text-center">
+                      <div className={`${styles.column} col`}>Doubles</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_two_final_kills_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_two_final_kills_bedwars / data.player.stats.Bedwars.eight_two_final_deaths_bedwars * 100) /100}</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.eight_two_wins_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.eight_two_wins_bedwars / data.player.stats.Bedwars.eight_two_losses_bedwars * 100) / 100}</div>
+                      </div>
+                      <div className="row text-center">
+                      <div className={`${styles.column} col`}>Threes</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.four_three_final_kills_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.four_three_final_kills_bedwars / data.player.stats.Bedwars.four_three_final_deaths_bedwars * 100) /100}</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.four_three_wins_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.four_three_wins_bedwars / data.player.stats.Bedwars.four_three_losses_bedwars * 100) / 100}</div>
+                      </div>
+                      <div className="row text-center">
+                      <div className={`${styles.column} col`}>Fours</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.four_four_final_kills_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.four_four_final_kills_bedwars / data.player.stats.Bedwars.four_four_final_deaths_bedwars * 100) /100}</div>
+                        <div className={`${styles.column} col`}>{data.player.stats.Bedwars.four_four_wins_bedwars}</div>
+                        <div className={`${styles.column} col`}>{Math.round(data.player.stats.Bedwars.four_four_wins_bedwars / data.player.stats.Bedwars.four_four_losses_bedwars * 100) / 100}</div>
+                      </div>
                     </div>
                     </>
                   )}
