@@ -122,7 +122,7 @@ export default function Stats() {
           {data && (
             <div className="row text-center justify-content-center">
                 <h2>BedWars</h2>
-                <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience}/>
+                {/* <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience}/> */}
               <div className="col-5">
                 <h3 className="skeleton-text">Wins</h3>
                 <h4 className="skeleton-text">{data.player.stats.Bedwars.wins_bedwars}</h4>
