@@ -90,7 +90,8 @@ export default function Stats() {
                 <div className={`container-fluid statcontainer`}>
                   {data && (
                     <>
-                    <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience} />
+                    {/* temporary fix */}
+                    {/* <PlayerBedwarsLevel experience={data.player.stats.Bedwars.Experience} /> */}
                     <div className={styles.text}>
                       <p>Coins</p>
                       <h3>{data.player.stats.Bedwars.coins}</h3>
