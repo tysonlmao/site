@@ -6,10 +6,15 @@ import Navigation from '../components/nav';
 import styles from '../styles/Login.module.css'
 import Footer from '../components/footer';
 import Login from "../components/login"
+import Head from 'next/head';
 
 export default function userLogin() {
     return (
         <>
+        <Head>
+            <title>tysonlmao.dev | login</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+         </Head>
             <div className={styles.pagecontent}>
                 <Login/>
             </div>

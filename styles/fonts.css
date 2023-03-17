@@ -4,3 +4,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Quinque Five";
+  src: url(../public/fonts/Quinquefive.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

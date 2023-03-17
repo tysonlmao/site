@@ -53,7 +53,6 @@ export default function App({ Component, pageProps }) {
       <div className="pagecolor">
         <Nav />
         <Component {...pageProps} />
-        <Footer />
       </div>
     </>
   );;
