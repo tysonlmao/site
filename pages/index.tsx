@@ -15,10 +15,16 @@ import TypeScriptLogo from "../public/home/typescript.svg";
 import JavaScriptLogo from "../public/home/javascript.svg";
 import HTMLLogo from "../public/home/html.svg";
 import PHPLogo from "../public/home/php.svg";
+import ReactLogo from "../public/home/react.svg";
+import BootstrapLogo from "../public/home/bootstrap.svg";
+import NodeLogo from "../public/home/node.svg";
+import WordpressLogo from "../public/home/wordpress.svg";
+import NextJSLogo from "../public/home/nextjs.svg";
+import Footer from '../components/footer';
 
 export async function getStaticProps() {
   return {
-    props: { }
+    props: {}
   };
 }
 
@@ -36,7 +42,6 @@ export default function Home() {
     const result = await signInWithPopup(auth, provider);
     console.log(result.user)
   }
-
   return (
     <>
       <Head>
@@ -62,10 +67,19 @@ export default function Home() {
             </div>
             <div className="col">
               <div className={`container-fluid ${styles.projectcontain}`}>
-                <h4>Project placeholder</h4>
-                <p>tysonlmao/placeholder</p>
+                <h4>Landing page</h4>
+                <a href="https://github.com/tysonlmaodev/website"><p>tysonlmaodev/website</p></a>
                 <div className={styles.projectcontent}>
-                  <p>This is some placeholder text to fill the box that will have something cool here eventually</p>
+                  <p>This very page you are currently viewing! It is an ongoing project of mine that I hope to expand over time.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className={`container-fluid ${styles.projectcontain}`}>
+                <h4>Cookify</h4>
+                <a href="https://github.com/tysonlmaodev/website"><p>tysonlmaodev/website</p></a>
+                <div className={styles.projectcontent}>
+                  <p>A hypixel stats website, with pro functionality.</p>
                 </div>
               </div>
             </div>
@@ -76,7 +90,6 @@ export default function Home() {
           <p>Developer toolbox</p>
           <div className={styles.spacer}></div>
           <div className="row text-center">
-            <h4>Languages</h4>
             <div className={`col`}>
               <HTMLLogo className={styles.logos}/>
               <p>HTML</p>
@@ -98,7 +111,30 @@ export default function Home() {
               <p className={styles.slightspacer}>PHP</p>
             </div>
           </div>
+          <div className="row text-center">
+            <div className="col">
+              <ReactLogo className={styles.logos}/>
+              <p>React</p>
+            </div>
+            <div className="col">
+              <BootstrapLogo className={styles.logos}/>
+              <p>Bootstrap</p>
+            </div>
+            <div className="col">
+              <NodeLogo className={styles.logos}/>
+              <p>Node</p>
+            </div>
+            <div className="col">
+              <WordpressLogo className={styles.logos} />
+              <p>WordPress</p>
+            </div>
+            <div className="col">
+              <NextJSLogo className={styles.logos} />
+              <p>NextJS</p>
+            </div>
+          </div>
         </div>
+      <Footer/>
       </div>
     </>
   )
