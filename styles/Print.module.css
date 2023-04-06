@@ -97,3 +97,44 @@
     max-width: 100%;
   }
 }
+
+/* calculator css */
+.formlabel {
+  display: block;
+  font-family: "VCR OSD Mono", monospace;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #f87591;
+}
+
+.price {
+  display: flex;
+  border: 2px solid #75f875;
+  border-radius: 5px;
+  background: rgba(117, 248, 117, 0.3);
+  width: 75%;
+  font-family: "VCR OSD Mono", monospace;
+  font-size: 2.5rem;
+  color: #75f875;
+}
+
+.check {
+  display: block;
+  width: 100%;
+  font-family: "VCR OSD Mono", monospace;
+  font-size: 2.5rem;
+  color: #f87591;
+  background: rgba(248, 117, 145, 0.3);
+  border: 2px solid #f87591;
+  border-radius: 5px;
+  height: fit-content;
+}
+.grams {
+  width: 25%;
+  border: 2px solid #f87591;
+  border-radius: 5px;
+  background: rgba(248, 117, 145, 0.3);
+  font-size: 2.5rem;
+  color: #f87591;
+  font-family: "VCR OSD Mono", monospace;
+}
