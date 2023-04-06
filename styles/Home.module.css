@@ -1,6 +1,6 @@
 /* ???? */
 .home {
-  padding: 3rem;
+  padding: 1rem;
   font-family: "Quinque Five", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
@@ -43,4 +43,99 @@
 .projectcontent {
   font-family: "Roboto Mono";
   font-size: 1rem;
+}
+
+.banner {
+  min-height: 30vh;
+  font-family: "VCR OSD Mono", monospace !important;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #f87591;
+  text-shadow: #ec7f97 0px 1px 1px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.item1,
+.item2,
+.item3 {
+  position: absolute;
+  display: block;
+  text-overflow: inherit;
+  font-size: 2em;
+  white-space: nowrap;
+
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item1 {
+  animation-name: anim-1;
+}
+
+.item2 {
+  animation-name: anim-2;
+}
+
+.item3 {
+  animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+  0%,
+  8.3% {
+    opacity: 0;
+  }
+  8.3%,
+  25% {
+    opacity: 1;
+  }
+  33.33%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anim-2 {
+  0%,
+  33.33% {
+    opacity: 0;
+  }
+  41.63%,
+  58.29% {
+    opacity: 1;
+  }
+  66.66%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anim-3 {
+  0%,
+  66.66% {
+    opacity: 0;
+  }
+  74.96%,
+  91.62% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .banner {
+    font-size: 1rem;
+    min-height: 20vh;
+    white-space: normal;
+  }
 }

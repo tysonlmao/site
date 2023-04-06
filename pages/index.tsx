@@ -28,7 +28,8 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home() {
+export default function Home({data}) {
+  console.log(data)
   const [show, setShow] = useState(false);
   function toggle(){
     setShow(!show);
@@ -50,9 +51,12 @@ export default function Home() {
       </Head>
       <div className="page-content">
         <div className={`container-fluid ${styles.home}`}>
-          <h2>My Projects</h2>
-          <p>my all-time projects archive</p>
-
+          <div className={`${styles.projectcontain} container-fluid ${styles.banner}`}>
+              <p className={`${styles.item1}`}>Fail fast, fail cheaply</p>
+              <p className={`${styles.item2}`}>Become lazy</p>
+              <p className={`${styles.item3}`}>Read the fucking manual</p>
+          </div>
+          <br />
           <div className="row">
             <div className="col">
               <div className={`container-fluid ${styles.projectcontain}`}>
@@ -84,54 +88,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className={`container-fluid ${styles.home}`}>
-          <h2>Tools</h2>
-          <p>Developer toolbox</p>
-          <div className={styles.spacer}></div>
-          <div className="row text-center">
-            <div className={`col`}>
-              <HTMLLogo className={styles.logos}/>
-              <p>HTML</p>
-            </div>
             <div className="col">
-              <PythonLogo className={styles.logos}/>
-              <p className={styles.slightspacer}>Python</p>
-            </div>
-            <div className="col">
-              <JavaScriptLogo className={styles.logos}/>
-              <p className={styles.slightspacer}>JavaScript</p>
-            </div>
-            <div className="col">
-              <TypeScriptLogo className={styles.logos}/>
-              <p className={styles.slightspacer}>TypeScript</p>
-            </div>
-            <div className="col">
-              <PHPLogo className= {styles.logos}/>
-              <p className={styles.slightspacer}>PHP</p>
-            </div>
-          </div>
-          <div className="row text-center">
-            <div className="col">
-              <ReactLogo className={styles.logos}/>
-              <p>React</p>
-            </div>
-            <div className="col">
-              <BootstrapLogo className={styles.logos}/>
-              <p>Bootstrap</p>
-            </div>
-            <div className="col">
-              <NodeLogo className={styles.logos}/>
-              <p>Node</p>
-            </div>
-            <div className="col">
-              <WordpressLogo className={styles.logos} />
-              <p>WordPress</p>
-            </div>
-            <div className="col">
-              <NextJSLogo className={styles.logos} />
-              <p>NextJS</p>
+              <div className={`container-fluid ${styles.projectcontain}`}>
+                <h4>Stats</h4>
+                <a href="https://github.com/tysonlmaodev/website"><p>tysonlmaodev/website</p></a>
+                <a href="/stats">View project</a>
+                <div className={styles.projectcontent}>
+                  <p>A hypixel stats website, with pro functionality.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -139,4 +104,22 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export async function getSSP(context: any) {
+  const res = await fetch(`http://tysonlmaodev.local/wp-json/wp/v2/posts/`)
+  const data = await res.json()
+  console.log(res.status)
+  console.log(data)
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+  return {
+    props: {
+      data
+    },
+  }
 }
