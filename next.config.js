@@ -4,6 +4,15 @@ const { parsed: myEnv } = require('dotenv').config({
 });
 
 module.exports = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com",
+                port: ""
+            }
+        ]
+    },
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,

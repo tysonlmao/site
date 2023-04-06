@@ -28,8 +28,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({data}) {
-  console.log(data)
+export default function Home() {
   const [show, setShow] = useState(false);
   function toggle(){
     setShow(!show);
@@ -106,20 +105,20 @@ export default function Home({data}) {
   )
 }
 
-export async function getSSP(context: any) {
-  const res = await fetch(`http://tysonlmaodev.local/wp-json/wp/v2/posts/`)
-  const data = await res.json()
-  console.log(res.status)
-  console.log(data)
+// export async function getSSP(context: any) {
+//   const res = await fetch(`http://tysonlmaodev.local/wp-json/wp/v2/posts/`)
+//   const data = await res.json()
+//   console.log(res.status)
+//   console.log(data)
 
-  if (!data) {
-    return {
-      notFound: true,
-    }
-  }
-  return {
-    props: {
-      data
-    },
-  }
-}
+//   if (!data) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+//   return {
+//     props: {
+//       data
+//     },
+//   }
+// }
