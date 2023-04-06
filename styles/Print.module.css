@@ -138,3 +138,10 @@
   color: #f87591;
   font-family: "VCR OSD Mono", monospace;
 }
+
+@media screen and (max-width: 896px) {
+  .cardtransparent {
+    margin: 0;
+    max-width: 100%;
+  }
+}
