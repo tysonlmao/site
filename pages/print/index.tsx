@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/Print.module.css";
 import Coffee from "../../components/coffee";
 import Image from "next/image";
+import PrintCostCalculator from "../../components/printcalculator";
 
 export default function Print() {
     return (
@@ -12,7 +13,11 @@ export default function Print() {
                     <h1 className={styles.h1}>PRINT</h1>
                     <p className={styles.p}>3D print anything</p>
                 </div>
+                
                 <div className={`row ${styles.row}`}>
+                <div className={`container-fluid ${styles.cardtransparent} `}>
+                    <PrintCostCalculator/>
+                </div>
                     <div className={`container-fluid col ${styles.card}`}>
                         <h2 className={`${styles.cardtitle}`}>Bring your STL</h2>
                         <p className={`${styles.cardtext}`}>To get started on your print job, you can send us the STL to review so we can generate a quote for your print. We will send this quote to the supplied email address and correspond accordingly to get you what you want. Please allow up to 24-48 hours to process the order, and get back to you. Once you've payed up for the job, we will send it out within 1-2 business days! To get a quote for your STL, it only costs you $1!</p>

@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/server.js", "firebase/ga.js", "pages/_app.js", "components/particle.jsx", "pages/api/checkout_sessions.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/server.js", "firebase/ga.js", "pages/_app.js", "components/particle.jsx", "pages/api/checkout_sessions.js", "components/printcalculator.tsx"],
   "exclude": ["node_modules"]
 }

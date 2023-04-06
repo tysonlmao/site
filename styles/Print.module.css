@@ -32,6 +32,14 @@
   background: rgba(248, 117, 145, 0.3);
 }
 
+.cardtransparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  font-family: "Roboto Mono", monospace;
+}
+
 .cardtitle {
   color: #f87591;
   font-family: "VCR OSD MONO", system-ui, -apple-system, BlinkMacSystemFont,
@@ -82,4 +90,10 @@
 .row {
   justify-content: center;
   padding: 0.7rem;
+}
+
+@media screen and (max-width: 896px) {
+  .card {
+    max-width: 100%;
+  }
 }
