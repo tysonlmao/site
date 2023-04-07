@@ -16,7 +16,7 @@ const PrintCostCalculator: React.FC = () => {
 
   return (
     <div>
-      <label htmlFor="grams" className={styles.formlabel}>AMOUNT OF GRAMS</label>
+      <label htmlFor="grams" className={styles.formlabel}>PRICE CHECK</label>
       <div className="d-flex justify-content-center align-items-center">
         <div className={`${styles.price} align-items-center justify-content-center`}>
           {cost.toLocaleString(undefined, { style: 'currency', currency: 'AUD' })}
@@ -25,7 +25,10 @@ const PrintCostCalculator: React.FC = () => {
       </div>
       <button onClick={calculateCost} className={styles.check}>CHECK PRICE</button>
       <div className="d-flex">
-        not including postage and handling
+        Measured in grams
+      </div>
+      <div className="d-flex">
+        Price not including postage and handling
       </div>
     </div>
   );

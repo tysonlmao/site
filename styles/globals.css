@@ -5,6 +5,11 @@
   --title-font-size: clamp(75px, -0.875rem + 8.333vw, 3.5rem);
 }
 
+* {
+  text-overflow: ellipsis;
+  overflow-wrap: normal;
+}
+
 .fluid {
   word-break: break-all;
   overflow-x: hidden;

@@ -87,16 +87,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col">
-              <div className={`container-fluid ${styles.projectcontain}`}>
-                <h4>Stats</h4>
-                <a href="https://github.com/tysonlmaodev/website"><p>tysonlmaodev/website</p></a>
-                <a href="/stats">View project</a>
-                <div className={styles.projectcontent}>
-                  <p>A hypixel stats website, with pro functionality.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       <Footer/>

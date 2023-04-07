@@ -5,6 +5,7 @@
 .p {
   font-size: 1rem;
   font-family: "Roboto Mono", monospace;
+  word-wrap: break-word;
 }
 
 .banner {
@@ -139,9 +140,13 @@
   font-family: "VCR OSD Mono", monospace;
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 500px) {
   .cardtransparent {
     margin: 0;
     max-width: 100%;
+  }
+
+  .grams {
+    max-height: 9vh;
   }
 }
