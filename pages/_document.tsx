@@ -13,6 +13,9 @@ export default function Document() {
                 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
 
 
+<link rel="preconnect" href="https://fonts.gstatic.com"></link>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet"></link>
+
                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
                 <script dangerouslySetInnerHTML={{
                 __html: `

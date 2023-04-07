@@ -11,3 +11,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../public/fonts/Barlow-Bold.ttf) formart("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
