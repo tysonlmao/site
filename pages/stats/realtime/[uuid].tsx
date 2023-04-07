@@ -5,7 +5,8 @@ import { PlayerData } from '../../../components/statsInterface';
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useRef } from 'react';
-
+import Countup from "../../../components/Countup";
+const sessionStartTime = new Date()
 
 export default function Realtime() {
     async function getStats(username: string) {
@@ -68,6 +69,8 @@ export default function Realtime() {
       }
     }
   }, [data, originalData]);
+
+  
     return (
         <>
             <div className={`container-fluid ${styles.body}`}>
@@ -75,6 +78,9 @@ export default function Realtime() {
                 <p>supercharge your hypixel experience</p>
                 <div className={`container-fluid ${styles.statcontainer}`}>
                 <h2 className={`text-center mt-1 ${styles.stattitle}`}>{data?.player.displayname}</h2>
+                <div className={`text-center ${styles.stattitle} text-white`}>
+                  <Countup startTime={sessionStartTime}/>
+                </div>
                     <h2 className={styles.sessiontitle}>LIVE SESSION</h2>
                     {originalData && (
                       <>
