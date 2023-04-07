@@ -77,40 +77,64 @@ export default function Realtime() {
                 <h2 className={`text-center mt-1 ${styles.stattitle}`}>{data?.player.displayname}</h2>
                     <h2 className={styles.sessiontitle}>LIVE SESSION</h2>
                     {originalData && (
+                      <>
                     <div className={`row text-center ${styles.text}`}>
                         <h3 className={styles.sessiontitle}>BEDWARS</h3>
                         {data && (
                         <>
                             <div className="col-sm">
                             <p className={styles.stattitle}>Wins</p>
-                            <h3 className={styles.stat}>{data.player.stats.Bedwars.wins_bedwars - originalData.player.stats.Bedwars.wins_bedwars}</h3>
-                            </div>
-                            <div className="col-sm">
-                                <p className={styles.stattitle}>WLR</p>
-                                <h3 className={styles.stat}>{Math.round(data.player.stats.Bedwars.wins_bedwars / data.player.stats.Bedwars.losses_bedwars * 100) / 100}</h3>
+                            <h3 className={styles.stat}>+{data.player.stats.Bedwars.wins_bedwars - originalData.player.stats.Bedwars.wins_bedwars}</h3>
                             </div>
                             <div className="col-sm">
                             <p className={styles.stattitle}>Finals</p>
-                            <h3 className={styles.stat}>{data.player.stats.Bedwars.final_kills_bedwars - originalData.player.stats.Bedwars.final_kills_bedwars}</h3>
-                            </div>
-                            <div className="col-sm">
-                                <p className={styles.stattitle}>FKDR</p>
-                                <h3 className={styles.stat}>{Math.round(data.player.stats.Bedwars.final_kills_bedwars / data.player.stats.Bedwars.final_deaths_bedwars * 100) /100}</h3>
+                            <h3 className={styles.stat}>+{data.player.stats.Bedwars.final_kills_bedwars - originalData.player.stats.Bedwars.final_kills_bedwars}</h3>
                             </div>
                             <div className="col-sm">
                             <p className={styles.stattitle}>Beds</p>
-                            <h3 className={styles.stat}>{data.player.stats.Bedwars.beds_broken_bedwars - originalData.player.stats.Bedwars.beds_broken_bedwars}</h3>
+                            <h3 className={styles.stat}>+{data.player.stats.Bedwars.beds_broken_bedwars - originalData.player.stats.Bedwars.beds_broken_bedwars}</h3>
                             </div>
                         </>
                         )}
                     </div>
+                    <div className={`row text-center  ${styles.text}`}>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Games <br /> lost</p>
+                        <h3 className={styles.statdanger}>+{data.player.stats.Bedwars.losses_bedwars - originalData.player.stats.Bedwars.losses_bedwars}</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Final <br />deaths</p>
+                        <h3 className={styles.statdanger}>+{data.player.stats.Bedwars.final_deaths_bedwars - originalData.player.stats.Bedwars.final_deaths_bedwars}</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>Beds <br /> lost</p>
+                        <h3 className={styles.statdanger}>+{data.player.stats.Bedwars.beds_lost_bedwars - originalData.player.stats.Bedwars.beds_lost_bedwars}</h3>
+                      </div>
+                    </div>
+                    <div className={`row text-center ${styles.text}`}>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>
+                          WLR
+                        </p>
+                        <h3 className={styles.stat}>TBA</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>FKDR</p>
+                        <h3 className={styles.stat}>TBA</h3>
+                      </div>
+                      <div className="col-sm">
+                        <p className={styles.stattitle}>BBLR</p>
+                        <h3 className={styles.stat}>TBA</h3>
+                      </div>
+                    </div>
+                      </>
                     )}
                     {originalData && (
                     <div className={`row text-center ${styles.text}`}>
-                        <h3 className={styles.sessiontitle}>DUELS</h3>
+                        {/* <h3 className={styles.sessiontitle}>DUELS</h3> */}
                         {data && (
                         <>
-                            <div className="col-sm">
+                            {/* <div className="col-sm">
                             <p className={styles.stattitle}>Wins</p>
                             <h3 className={styles.stat}>{data.player.stats.Duels.wins - originalData.player.stats.Duels.wins}</h3>
                             </div>
@@ -125,8 +149,7 @@ export default function Realtime() {
                             <div className="col-sm">
                             <p className={styles.stattitle}>KDR</p>
                             <h3 className={styles.stat}>{Math.round(data.player.stats.Duels.kills / data.player.stats.Duels.deaths * 100) /100}</h3>
-                            </div>
-
+                            </div> */}
                         </>
                         )}
                     </div>
