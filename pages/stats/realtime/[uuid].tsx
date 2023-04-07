@@ -103,6 +103,8 @@ export default function Realtime() {
                         </>
                         )}
                     </div>
+                    {data && (
+                    <>
                     <div className={`row text-center  ${styles.text}`}>
                       <div className="col-sm">
                         <p className={styles.stattitle}>Games <br /> lost</p>
@@ -133,6 +135,8 @@ export default function Realtime() {
                         <h3 className={styles.stat}>TBA</h3>
                       </div>
                     </div>
+                    </>
+                    )}
                       </>
                     )}
                     {originalData && (
