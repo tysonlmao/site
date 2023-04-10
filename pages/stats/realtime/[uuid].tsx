@@ -80,7 +80,7 @@ export default function Realtime() {
           const imgData = canvas.toDataURL("image/png");
           const link = document.createElement("a");
           link.href = imgData;
-          link.download = "session-screenshot.png";
+          link.download = `${data?.player.displayname}.png`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
