@@ -11,6 +11,9 @@ export default function fish() {
         <meta property="og:image" content="https://media.tenor.com/6m3I1g_WiokAAAAM/fish-spin-sha.gif" />
       </Head>
     <div className={styles.cover}></div>
+    <div className={styles.image}>
+        <img src="https://media.tenor.com/6m3I1g_WiokAAAAM/fish-spin-sha.gif" alt="fish" className={styles.fish}/>
+    </div>
     </>
     )
 }
