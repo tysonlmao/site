@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from "../styles/Print.module.css"
+import styles from "../styles/Print.module.css";
 
 const PrintCostCalculator: React.FC = () => {
   const [grams, setGrams] = useState<number | undefined>(undefined);
@@ -33,5 +33,5 @@ const PrintCostCalculator: React.FC = () => {
     </div>
   );
 };
-  
+
 export default PrintCostCalculator;

@@ -3,6 +3,7 @@ import styles from "../../../styles/Realtime.module.css";
 import config from "../../../config.json";
 import { PlayerData } from '../../../components/statsInterface';
 import { useState, useEffect } from "react";
+import Nav from "../../../components/nav";
 
 export default function Realtime() {
     async function getStats(username: string) {
@@ -45,6 +46,7 @@ export default function Realtime() {
       }, [uuid]);
     return (
         <>
+            <Nav/>
             <div className={`container-fluid ${styles.body}`}>
                 <h1 className={`${styles.titles}`}>REALTIME ANALYTICS</h1>
                 <p>where to?</p>

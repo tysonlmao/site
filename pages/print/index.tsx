@@ -3,10 +3,12 @@ import styles from "../../styles/Print.module.css";
 import Coffee from "../../components/coffee";
 import Image from "next/image";
 import PrintCostCalculator from "../../components/printcalculator";
+import Nav from "../../components/nav";
 
 export default function Print() {
     return (
         <>
+        <Nav/>
         <div className="page-content">
             <div className="container-fluid">
                 <div className={styles.banner}>

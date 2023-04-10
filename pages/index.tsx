@@ -48,6 +48,7 @@ export default function Home() {
         <title>tysonlmao.dev | home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Nav/>
       <div className="page-content">
         <div className={`container-fluid ${styles.home}`}>
           <div className={`${styles.projectcontain} container-fluid ${styles.banner}`}>

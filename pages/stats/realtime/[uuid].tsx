@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useRef } from 'react';
 import Countup from "../../../components/Countup";
+import Nav from "../../../components/nav";
 const sessionStartTime = new Date()
 
 export default function Realtime() {
@@ -73,6 +74,7 @@ export default function Realtime() {
   
     return (
         <>
+          <Nav/>
             <div className={`container-fluid ${styles.body}`}>
                 <h1 className={`${styles.titles}`}>REALTIME ANALYTICS</h1>
                 <p>supercharge your hypixel experience</p>
