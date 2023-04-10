@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useRef } from 'react';
 import Countup from "../../../components/Countup";
 import Nav from "../../../components/nav";
+import html2canvas from 'html2canvas'; // Import the library
 const sessionStartTime = new Date()
 
 export default function Realtime() {
@@ -70,14 +71,28 @@ export default function Realtime() {
       }
     }
   }, [data, originalData]);
-
   
+
+    const saveSession = async () => {
+      const statContainer = document.querySelector(`.${styles.statcontainer}`);
+      if (statContainer) {
+          const canvas = await html2canvas(statContainer);
+          const imgData = canvas.toDataURL("image/png");
+          const link = document.createElement("a");
+          link.href = imgData;
+          link.download = "session-screenshot.png";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+      }
+  };
     return (
         <>
           <Nav/>
-            <div className={`container-fluid ${styles.body}`}>
+          <div className={`container-fluid ${styles.body}`}>
                 <h1 className={`${styles.titles}`}>REALTIME ANALYTICS</h1>
                 <p>supercharge your hypixel experience</p>
+                {/* Add the Save Session button */}
                 <div className={`container-fluid ${styles.statcontainer}`}>
                 <h2 className={`text-center mt-1 ${styles.stattitle}`}>{data?.player.displayname}</h2>
                 <div className={`text-center ${styles.stattitle} text-white`}>
@@ -89,7 +104,7 @@ export default function Realtime() {
                     <div className={`row text-center ${styles.text}`}>
                         <h3 className={styles.sessiontitle}>BEDWARS</h3>
                         {data && (
-                        <>
+                          <>
                             <div className="col-sm">
                             <p className={styles.stattitle}>Wins</p>
                             <h3 className={styles.stat}>+{data.player.stats.Bedwars.wins_bedwars - originalData.player.stats.Bedwars.wins_bedwars}</h3>
@@ -106,7 +121,7 @@ export default function Realtime() {
                         )}
                     </div>
                     {data && (
-                    <>
+                      <>
                     <div className={`row text-center  ${styles.text}`}>
                       <div className="col-sm">
                         <p className={styles.stattitle}>Games <br /> lost</p>
@@ -142,10 +157,10 @@ export default function Realtime() {
                       </>
                     )}
                     {originalData && (
-                    <div className={`row text-center ${styles.text}`}>
+                      <div className={`row text-center ${styles.text}`}>
                         {/* <h3 className={styles.sessiontitle}>DUELS</h3> */}
                         {data && (
-                        <>
+                          <>
                             {/* <div className="col-sm">
                             <p className={styles.stattitle}>Wins</p>
                             <h3 className={styles.stat}>{data.player.stats.Duels.wins - originalData.player.stats.Duels.wins}</h3>
@@ -161,7 +176,7 @@ export default function Realtime() {
                             <div className="col-sm">
                             <p className={styles.stattitle}>KDR</p>
                             <h3 className={styles.stat}>{Math.round(data.player.stats.Duels.kills / data.player.stats.Duels.deaths * 100) /100}</h3>
-                            </div> */}
+                          </div> */}
                         </>
                         )}
                     </div>
@@ -169,6 +184,7 @@ export default function Realtime() {
 
 
                 </div>
+                    <button className={`btn btn-primary ${styles.saveButton} d-flex justify-content-center`} onClick={saveSession}>Save Session</button>
             </div>
         </>
     )
