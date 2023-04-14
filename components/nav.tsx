@@ -1,7 +1,5 @@
 import styles from "../styles/Navigation.module.css";
 import Compass from '../public/compass.svg';
-import { useAuthState } from "react-firebase-hooks/auth";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import React from "react";
 import Database from "../public/database.svg"
 
@@ -13,9 +11,9 @@ export default function Nav() {
           <div className="container-fluid">
             <a className={styles.brand} href="/">tysonlmao.dev</a>
             <div>
-            <a href="/stats" className={`${styles.navbutton}`} type="button" aria-expanded="false">
+            {/* <a href="/stats" className={`${styles.navbutton}`} type="button" aria-expanded="false">
               <span><Database className={styles.compass}/></span>
-            </a>
+            </a> */}
             <button className={`navbar-toggler ${styles.navbutton}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
               <span><Compass className={styles.compass}/></span>
               {/* change */}

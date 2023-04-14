@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { PlayerData } from '../../components/statsInterface';
 import styles from "../../styles/Stats.module.css";
 import Footer from "../../components/footer";
+import Nav from "../../components/nav";
 
 
 export default function Stats() {
@@ -62,6 +63,7 @@ export default function Stats() {
 
     return (
         <>
+        <Nav />
         <div className="container-fluid">
         <div className={styles.title}>
           <h2 className={`${styles.title} text-center`}>{data?.player.displayname}</h2>

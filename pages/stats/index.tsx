@@ -4,6 +4,7 @@ import styles from "../../styles/StatsSearch.module.css"
 import Link from "next/link"
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Nav from "../../components/nav";
 
 function useMyRouter() {
     // const router = useRouter();
@@ -30,6 +31,7 @@ export default function Stats() {
 
     return(
     <>
+    <Nav/>
     <div className={styles.container}>
         <div className="row align-items-center justify-content-center">
         <div className="col-md-3">

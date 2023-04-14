@@ -1,7 +1,4 @@
 import React, { ReactElement } from "react";
-import firebase from "../firebase/firebaseClient"
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
-import { useAuthState } from "react-firebase-hooks/auth"
 import styles from "../styles/Login.module.css"
 import { useRouter } from "next/router";
 

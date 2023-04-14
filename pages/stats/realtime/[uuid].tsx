@@ -75,16 +75,16 @@ export default function Realtime() {
 
     const saveSession = async () => {
       const statContainer = document.querySelector(`.${styles.statcontainer}`);
-      if (statContainer) {
-          const canvas = await html2canvas(statContainer);
-          const imgData = canvas.toDataURL("image/png");
-          const link = document.createElement("a");
-          link.href = imgData;
-          link.download = `${data?.player.displayname}.png`;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-      }
+      // if (statContainer) {
+      //     const canvas = await html2canvas(statContainer);
+      //     const imgData = canvas.toDataURL("image/png");
+      //     const link = document.createElement("a");
+      //     link.href = imgData;
+      //     link.download = `${data?.player.displayname}.png`;
+      //     document.body.appendChild(link);
+      //     link.click();
+      //     document.body.removeChild(link);
+      // }
   };
     return (
         <>
