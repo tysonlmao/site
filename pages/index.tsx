@@ -8,6 +8,7 @@ import { initFirebase } from '../config/firebase'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import Nav from "../components/nav";
 import Coffee from "../components/coffee"
+import "animate.css";
 
 // junk
 import PythonLogo from "../public/home/python.svg";
@@ -42,6 +43,19 @@ export default function Home() {
     const result = await signInWithPopup(auth, provider);
     console.log(result.user)
   }
+
+  let inspiration = [
+    "Fail fast, fail cheaply",
+    "Become lazy",
+    "Read the fucking manual",
+    "Target the low hanging fruit"
+  ]
+  const [random, setRandom] = useState("");
+
+  useEffect(() => {
+    setRandom(inspiration[Math.floor(Math.random() * inspiration.length)]);
+  }, []);
+
   return (
     <>
       <Head>
@@ -52,9 +66,7 @@ export default function Home() {
       <div className="page-content">
         <div className={`container-fluid ${styles.home}`}>
           <div className={`${styles.projectcontain} container-fluid ${styles.banner}`}>
-              <p className={`${styles.item1}`}>Fail fast, fail cheaply</p>
-              <p className={`${styles.item2}`}>Become lazy</p>
-              <p className={`${styles.item3}`}>Read the fucking manual</p>
+              <h2 className={`${styles.bannertext} animate__bounce`}>{random}</h2>
           </div>
           <br />
           <div className="row">
