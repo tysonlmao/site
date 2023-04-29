@@ -6,7 +6,7 @@ import Database from "../public/database.svg"
 export default function Nav() {
   return (
     <>
-      <div className={styles.navroot}>
+      <div className={`${styles.navroot} fixed-top`}>
         <div className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className={styles.brand} href="/">tysonlmao.dev</a>
@@ -24,17 +24,8 @@ export default function Nav() {
               </ul>
               <div className="d-flex align-items-center">
                 <div className={`dropdown me-3 ${styles.buttonlink}`}>
-                  <button className={`btn dropdown-toggle styles.a ${styles.buttonlinks}`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Account
-                  </button>
-                  <ul className={`dropdown-menu ${styles.buttonlink}`}>
-                    <li><span className="dropdown-item">Hi</span></li>
-                    <li><hr className="dropdown-divider"></hr></li>
-                    <li><a href="/account/settings" className="dropdown-item"><span>Account</span></a></li>
-                    <li><a href="/" className="dropdown-item"><span>Sign out</span></a></li>
-                  </ul>
                 </div>
-                <a href="/login" className={`btn btn-outline-danger ${styles.buttonlinks}`}>Sign In</a>
+                <a href="/stats" className=" text-white text-decoration-none">Stats</a>
               </div>
             </div>
           </div>
