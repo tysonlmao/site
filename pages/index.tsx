@@ -50,10 +50,8 @@ export default function Home() {
           </div>
           <br />
           <div className="text-content">
-
           </div>
         </div>
-      <Footer/>
       </div>
     </>
   )
