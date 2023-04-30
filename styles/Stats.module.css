@@ -1,4 +1,5 @@
 .title {
+  margin-top: 3rem;
   font-size: 75px;
   color: white;
   font-family: "VCR OSD Mono", system-ui, -apple-system, BlinkMacSystemFont,
@@ -12,7 +13,7 @@
   /* width: 20rem; */
   border: none !important;
   color: white;
-  background-color: #221c24;
+  background-color: transparent;
   font-family: "VCR OSD Mono";
   text-transform: uppercase;
 }
@@ -105,4 +106,9 @@
 
 .text > p {
   margin-bottom: 0px;
+}
+
+.cover {
+  background-image: url("../public/images/stats_backdrop.jpg");
+  height: 100vh;
 }

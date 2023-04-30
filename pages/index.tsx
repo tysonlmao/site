@@ -45,11 +45,14 @@ export default function Home() {
         <div className={`${styles.home}`}>
           <div className={`container-fluid ${styles.banner} d-flex justify-content-between align-items-center`}>
                 <div className="col">
-                  <h2 className={`${styles.bannertext} animate__animated animate__fadeInUp`}>{random}</h2>
+                  <div className={`${styles.bannertext} animate__animated animate__fadeInUp`}>
+                    <h2 className={`s-1`}>{random}</h2>
+                  </div>
             </div>
           </div>
           <br />
           <div className="text-content">
+            
           </div>
         </div>
       </div>

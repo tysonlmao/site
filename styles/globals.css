@@ -1,6 +1,7 @@
 :root {
   --primary-color: #fdadbe;
   --primary-higher: #f87591;
+  --splash-color: #644ab3;
   --secondary-color: #221c24;
   --title-font-size: clamp(75px, -0.875rem + 8.333vw, 3.5rem);
 }
@@ -12,8 +13,8 @@
   padding: 0;
 
   word-break: break-all;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  /* border: 1px dashed white; */
 }
 
 .root {
@@ -44,4 +45,9 @@
 .pagecolor {
   height: 100vh;
   background-color: var(--secondary-color);
+}
+
+/* nit pick */
+.s-1 {
+  color: var(--splash-color);
 }

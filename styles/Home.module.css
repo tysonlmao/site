@@ -15,7 +15,7 @@
 }
 
 .bannertext {
-  color: #644ab3;
+  color: #644ab3 !important;
   padding: 2rem;
 }
 
