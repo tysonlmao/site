@@ -1,17 +1,3 @@
-/* ???? */
-.home {
-  padding: 1rem;
-  font-family: "Quinque Five", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 0.7rem;
-}
-
-.logos {
-  width: 50px;
-  height: 50px;
-}
-
 .projectcontain {
   border: 3px solid #f87591;
   border-radius: 10px;
@@ -19,54 +5,21 @@
 }
 
 .banner {
-  min-height: 25vh;
-  font-family: "VCR OSD Mono", monospace !important;
+  min-height: 100vh;
   text-transform: uppercase;
   font-size: 3rem;
   color: #f87591;
-  background-image: url("../public/pexels-pixabay-531360.jpg");
+  background-image: url("../public/images/banner_home.jpg");
   background-size: cover;
-  background-position: center;
-  text-shadow: #ec7f97 0px 1px 1px;
-  overflow: hidden;
-  align-items: center;
-  display: flex;
+  background-attachment: fixed; /* Add this property */
 }
 
 .bannertext {
-  font-size: 5rem;
-  color: #f87591;
-  padding: 3rem;
+  color: #644ab3 !important;
+  padding: 2rem;
 }
 
 .bannerbutton {
   font-size: 2rem;
   color: #f87591;
-}
-
-.spacer {
-  padding-top: 3rem;
-}
-
-.slightspacer {
-  margin-top: 0.5rem;
-}
-
-.projectcontain > h4 {
-  margin-top: 1rem;
-  margin-bottom: 0px;
-}
-
-.projectcontain > a {
-  text-decoration: none;
-  color: white;
-}
-
-.projectcontain > a:hover {
-  color: #fdadbe;
-}
-
-.projectcontent {
-  font-family: "Roboto Mono";
-  font-size: 1rem;
 }

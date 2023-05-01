@@ -64,9 +64,10 @@ export default function Stats() {
     return (
         <>
         <Nav />
+        <div className={styles.cover}>
         <div className="container-fluid">
         <div className={styles.title}>
-          <h2 className={`${styles.title} text-center`}>{data?.player.displayname}</h2>
+          <h2 className={`${styles.title} text-center animate__fadeInDown animate__animated`}>{data?.player.displayname}</h2>
         </div>
           <div className={`card ${styles.statcard}`}>
             {data && (
@@ -79,6 +80,7 @@ export default function Stats() {
             )}
           </div>
         </div>
+        
         <div className={`container-fluid ${styles.containaccord}`}>
         <div className={`${styles.accordion} accordion`} id="accordionExample">
           <div className={`${styles.accorditem} ${styles.accorditem1} accordion-item`}>
@@ -116,7 +118,6 @@ export default function Stats() {
                         <h3>{data.player.stats.Bedwars.kills_bedwars}</h3>
                       </div>
                     </div>
-                    <button onClick={toggleBW}>a</button>
                     <div id="show-all">
                       <div className="row text-center">
                         <div className={`${styles.column} col`}></div>
@@ -190,6 +191,7 @@ export default function Stats() {
                 
               </div>
             </div>
+          </div>
           </div>
         </div>
         </div>
