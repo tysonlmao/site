@@ -48,7 +48,8 @@ export default function Home() {
     "Fail fast, fail cheaply",
     "Become lazy",
     "Read the fucking manual",
-    "Target the low hanging fruit"
+    "Target the low hanging fruit",
+    "Be part of the solution"
   ]
   const [random, setRandom] = useState("");
 
