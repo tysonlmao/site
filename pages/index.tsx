@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import ChevronDown from '../public/chevron-down.svg';
 import Database from '../public/database.svg';
 import React, { useState, useEffect } from 'react';
-import { initFirebase } from '../config/firebase'
+import { initFirebase } from '../config/firebase';
 import Nav from "../components/nav";
 import "animate.css";
 
@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
 export default function Home() {
   const [show, setShow] = useState(false);
-  function toggle(){
+  function toggle() {
     setShow(!show);
   }
 
@@ -27,8 +27,9 @@ export default function Home() {
     "Become lazy",
     "Read the fucking manual",
     "Target the low hanging fruit",
-    "Be part of the solution"
-  ]
+    "Be part of the solution",
+    "Less is more"
+  ];
   const [random, setRandom] = useState("");
 
   useEffect(() => {
@@ -41,22 +42,22 @@ export default function Home() {
         <title>tysonlmao.dev | home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Nav/>
+      <Nav />
       <div className="root">
         <div className={`${styles.home}`}>
           <div className={`container-fluid ${styles.banner} d-flex justify-content-between align-items-center`}>
-                <div className="col">
-                  <div className={`${styles.bannertext} animate__animated animate__fadeInUp`}>
-                    <h2 className={`s-1`}>{random}</h2>
-                  </div>
+            <div className="col">
+              <div className={`${styles.bannertext} animate__animated animate__fadeInUp`}>
+                <h2 className={`s-1`}>{random}</h2>
+              </div>
             </div>
           </div>
           <br />
           <div className="text-content">
-            
+
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
