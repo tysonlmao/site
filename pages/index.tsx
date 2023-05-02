@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css';
 import ChevronDown from '../public/chevron-down.svg';
 import Database from '../public/database.svg';
 import React, { useState, useEffect } from 'react';
-import { initFirebase } from '../config/firebase';
 import Nav from "../components/nav";
 import "animate.css";
 
