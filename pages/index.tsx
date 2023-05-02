@@ -27,7 +27,9 @@ export default function Home() {
     "Read the fucking manual",
     "Target the low hanging fruit",
     "Be part of the solution",
-    "Less is more"
+    "Less is more",
+    "66 65 6D 62 6F 79"
+
   ];
   const [random, setRandom] = useState("");
 
