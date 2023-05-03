@@ -28,8 +28,8 @@ export default function Home() {
     "Target the low hanging fruit",
     "Be part of the solution",
     "Less is more",
-    "66 65 6D 62 6F 79"
-
+    "66 65 6D 62 6F 79",
+    "Nothing works in isolation"
   ];
   const [random, setRandom] = useState("");
 
