@@ -27,7 +27,8 @@ export default function Home() {
     "Become lazy",
     "Read the fucking manual",
     "Target the low hanging fruit",
-    "Be part of the solution"
+    "Be part of the solution",
+    "tax fraud"
   ]
   const [random, setRandom] = useState("");
 
