@@ -6,7 +6,7 @@ import Database from "../public/database.svg"
 export default function Nav() {
   return (
     <>
-      <div className={`${styles.navroot} fixed-top`}>
+      <div className={`${styles.navroot}`}>
         <div className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className={styles.brand} href="/">tysonlmao.dev</a>

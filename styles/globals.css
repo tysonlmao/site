@@ -1,7 +1,7 @@
 :root {
   --primary-color: #fdadbe;
   --primary-higher: #f87591;
-  --splash-color: #644ab3;
+  --splash-color: #fdadbe;
   --secondary-color: #221c24;
   --title-font-size: clamp(75px, -0.875rem + 8.333vw, 3.5rem);
 }
@@ -26,9 +26,6 @@
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-size: 16px;
-}
-
-.text-content {
 }
 
 @media screen and (min-width: 700px) {

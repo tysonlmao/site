@@ -27,7 +27,8 @@ export default function Home() {
     "Read the fucking manual",
     "Target the low hanging fruit",
     "Be part of the solution",
-    "tax fraud"
+    "Do the simple things",
+    "Start simple, get complex"
   ]
   const [random, setRandom] = useState("");
 
@@ -41,7 +42,6 @@ export default function Home() {
         <title>tysonlmao.dev | home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Nav />
       <div className="root">
         <div className={`${styles.home}`}>
           <div className={`container-fluid ${styles.banner} d-flex justify-content-between align-items-center`}>
@@ -50,10 +50,7 @@ export default function Home() {
                 <h2 className={`s-1`}>{random}</h2>
               </div>
             </div>
-          </div>
-          <br />
-          <div className="text-content">
-
+          <Nav />
           </div>
         </div>
       </div>
