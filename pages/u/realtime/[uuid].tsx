@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { useRef } from 'react';
 import Countup from "../../../components/Countup";
 import Nav from "../../../components/nav";
-import html2canvas from 'html2canvas'; // Import the library
 const sessionStartTime = new Date()
 
 export default function Realtime() {

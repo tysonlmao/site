@@ -50,7 +50,14 @@ export default function Home() {
                 <h2 className={`s-1`}>{random}</h2>
               </div>
             </div>
-          <Nav />
+          <>
+          <ul className={styles.navigation}>
+            <li><a href="/">tysonlmao.dev</a></li>
+            <li><a href="/stats">hypixel</a></li>
+            <li><a href="/prints">3D printing</a></li>
+          </ul>
+            {/* add a navigation here */}
+          </>
           </div>
         </div>
       </div>

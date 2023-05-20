@@ -21,7 +21,7 @@ export default function Stats() {
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.code === 'Enter') {
-      router.push(`/stats/${playerName}`);
+      router.push(`/u/${playerName}`);
     }
     }
 

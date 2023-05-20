@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../../styles/Print.module.css";
-import Coffee from "../../components/coffee";
-import Image from "next/image";
+nimport Image from "next/image";
 import PrintCostCalculator from "../../components/printcalculator";
 import Nav from "../../components/nav";
 
