@@ -32,16 +32,9 @@ export default function Stats() {
     return(
     <>
     <Nav/>
-    <div className={styles.container}>
-        <div className="row align-items-center justify-content-center">
-        <div className="col-md-3">
-            <p className={styles.text}>search for a players stats...</p>
+    <div className="container-fluid">
             <input type="text" className={` ${styles.btnsearch} form-control form-control-sm`} placeholder="name" onKeyDown={handleKeyDown} onChange={handleChange} value={playerName} />
-        </div>
-        </div>
     </div>
-    <div className={styles.container2}></div>
-
     </>
     )
 }

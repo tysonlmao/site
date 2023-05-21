@@ -7,13 +7,6 @@ import React, { useState, useEffect } from 'react';
 import Nav from "../components/nav";
 import "animate.css";
 
-import Footer from '../components/footer';
-
-export async function getStaticProps() {
-  return {
-    props: {}
-  };
-}
 
 export default function Home() {
   const [show, setShow] = useState(false);
@@ -39,8 +32,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>tysonlmao.dev | home</title>
+        <title>tysonlmao.dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="View ${}"></meta>
       </Head>
       <div className="root">
         <div className={`${styles.home}`}>
@@ -51,12 +45,11 @@ export default function Home() {
               </div>
             </div>
           <>
-          <ul className={styles.navigation}>
-            <li><a href="/">tysonlmao.dev</a></li>
-            <li><a href="/stats">hypixel</a></li>
-            <li><a href="/prints">3D printing</a></li>
-          </ul>
-            {/* add a navigation here */}
+            <ul className={styles.navigation}>
+              <li><a href="/">tysonlmao.dev</a></li>
+              <li><a href="/hypixel">hypixel</a></li>
+              <li><a href="/prints">3D printing</a></li>
+            </ul>
           </>
           </div>
         </div>

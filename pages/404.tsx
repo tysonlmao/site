@@ -6,6 +6,7 @@ export default function pagenotfound() {
     return (
         <>
             <div className={styles.error}>
+                    <a href="/" className="btn btn-danger">Back home</a>
                 <div className={`styles.icon align-items-center d-flex justify-content-center`}>   
                     <Cross className={styles.cross}/>
                 </div>

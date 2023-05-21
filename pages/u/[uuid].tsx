@@ -8,7 +8,6 @@ import PlayerBedwarsLevel from "../../components/PlayerBedwarsLevel"
 import { useRouter } from "next/router";
 import { PlayerData } from '../../components/statsInterface';
 import styles from "../../styles/Stats.module.css";
-import Footer from "../../components/footer";
 import Nav from "../../components/nav";
 
 
@@ -91,7 +90,6 @@ export default function Stats() {
               </div>
             </div>
         </div>
-        <Footer/>
         </div>
     )
 }
