@@ -28,7 +28,8 @@ export default function Home() {
     "Target the low hanging fruit",
     "Be part of the solution",
     "Do the simple things",
-    "Start simple, get complex"
+    "Start simple, get complex",
+    "Don't ice an uncooked cake"
   ]
   const [random, setRandom] = useState("");
 
