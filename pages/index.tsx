@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 // import Nav from '../components/nav';
-import ChevronDown from '../public/chevron-down.svg';
-import Database from '../public/database.svg';
 import React, { useState, useEffect } from 'react';
 import Nav from "../components/nav";
 import "animate.css";
-
+import styles from "../styles/Home.module.css";
 import Footer from '../components/footer';
 
 export async function getStaticProps() {
