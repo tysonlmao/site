@@ -1,7 +1,7 @@
 :root {
   --primary-color: #fdadbe;
   --primary-higher: #f87591;
-  --splash-color: #fdadbe;
+  --splash-color: yellow;
   --secondary-color: #221c24;
   --title-font-size: clamp(75px, -0.875rem + 8.333vw, 3.5rem);
 }
@@ -47,4 +47,6 @@
 /* nit pick */
 .s-1 {
   color: var(--splash-color);
+  background-color: black;
+  padding: 1rem;
 }
