@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
   return (
     <>
-      <div className="pagecolor">
+      <div className="pagecolor" lang="en-GB">
         <Component {...pageProps} />
         <Analytics />
       </div>
