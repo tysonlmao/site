@@ -77,10 +77,19 @@ export default function Realtime() {
           <title>{data?.player.displayname} | tysonlmao.dev</title>
         </Head>
           <Nav/>
+          <aside className={`${styles.asidemenu}`}>
+            <h4>Preferences</h4>
+            <div>
+              <hr />
+              <p>Theme</p>
+              <hr />
+              <p>API key</p>
+            </div>
+          </aside>
           <div className={`container-fluid ${styles.body}`}>
-                <h1 className={`${styles.titles} text-center`}>REALTIME ANALYTICS</h1>
                 <br/>
                 <div className={`container-fluid ${styles.statcontainer}`}>
+                
                 <h2 className={`text-center mt-1 ${styles.stattitle}`}>{data?.player.displayname}</h2>
                 <div className={`text-center ${styles.stattitle} text-white`}>
                   <Countup startTime={sessionStartTime}/>
@@ -157,19 +166,28 @@ export default function Realtime() {
                           <h3 className={styles.sessiontitle}>DUELS</h3>
                             <div className="col-sm">
                               <p className={styles.stattitle}>Wins</p>
+                              <h3 className={styles.stat}>{data.player.stats.Duels.wins}</h3>
+
+                              <p className={styles.stattitle}>S/WIN</p>
                               <h3 className={styles.stat}>{data.player.stats.Duels.wins - originalData.player.stats.Duels.wins}</h3>
                             </div>
                             <div className="col-sm">
                               <p className={styles.stattitle}>WLR</p>
                               <h3 className={styles.stat}>{Math.round(data.player.stats.Duels.wins / data.player.stats.Duels.losses * 100) /100}</h3>
+                              <p className={styles.stattitle}>S/KILL</p>
+                              <h3 className={styles.stat}>{data.player.stats.Duels.kills - originalData.player.stats.Duels.kills}</h3>
                             </div>
                               <div className="col-sm">
                               <p className={styles.stattitle}>Kills</p>
-                            <h3 className={styles.stat}>{data.player.stats.Duels.kills - originalData.player.stats.Duels.kills}</h3>
+                              <h3 className={styles.stat}>{data.player.stats.Duels.kills}</h3>
+                              <p className={styles.stattitle}>S/KDR</p>
+                            <h3 className={styles.stat}>{Math.round((data.player.stats.Duels.kills - originalData.player.stats.Duels.kills) / (data.player.stats.Duels.deaths - originalData.player.stats.Duels.deaths) * 100) / 100}</h3>
                             </div>
                             <div className="col-sm">
                             <p className={styles.stattitle}>KDR</p>
                             <h3 className={styles.stat}>{Math.round(data.player.stats.Duels.kills / data.player.stats.Duels.deaths * 100) /100}</h3>
+                              <p className={styles.stattitle}>S/WLR</p>
+                            <h3 className={styles.stat}>{Math.round((data.player.stats.Duels.wins - originalData.player.stats.Duels.wins) / (data.player.stats.Duels.losses - originalData.player.stats.Duels.losses) * 100) / 100}</h3>
                           </div>
                         </>
                         )}
