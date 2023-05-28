@@ -11,6 +11,8 @@ import Script from 'next/script';
 import config from "../config.json";
 import Footer from '../components/footer';
 import Nav from "../components/nav";
+import { Analytics } from '@vercel/analytics/react';
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -20,8 +22,9 @@ export default function App({ Component, pageProps }) {
   }, [router.events]);
   return (
     <>
-      <div className="pagecolor">
+      <div className="pagecolor" lang="en-GB">
         <Component {...pageProps} />
+        <Analytics />
       </div>
     </>
   );;

@@ -16,6 +16,8 @@
 
 .bannertext {
   padding: 2rem;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .bannerbutton {
@@ -23,19 +25,25 @@
   color: #f87591;
 }
 
-.navigation {
-  direction: rtl;
-  list-style: none;
-  font-size: 1.5rem;
-  font-family: "Roboto Mono", system-ui;
+.navbarcustom {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.navigation li a {
-  color: white;
+.navtext {
+  color: yellow;
   text-decoration: none;
-  text-transform: none;
 }
 
-.navigation li a:hover {
+.navtext:hover {
+  color: yellow;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .navbarcustom {
+    display: none;
+  }
 }
