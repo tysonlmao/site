@@ -78,14 +78,16 @@ export default function Realtime() {
         </Head>
           <Nav/>
           <div className={`container-fluid ${styles.body}`}>
-                <h1 className={`${styles.titles}`}>REALTIME ANALYTICS</h1>
-                <p>supercharge your hypixel experience</p>
+                <h1 className={`${styles.titles} text-center`}>REALTIME ANALYTICS</h1>
+                <p className="text-center mb-5">supercharge your hypixel experience</p>
                 <div className={`container-fluid ${styles.statcontainer}`}>
                 <h2 className={`text-center mt-1 ${styles.stattitle}`}>{data?.player.displayname}</h2>
                 <div className={`text-center ${styles.stattitle} text-white`}>
                   <Countup startTime={sessionStartTime}/>
                 </div>
                     <h2 className={styles.sessiontitle}>LIVE SESSION</h2>
+                    </div>
+                    <div className={styles.statcontainer}>
                     {originalData && (
                       <>
                     <div className={`row text-center ${styles.text}`}>
@@ -146,7 +148,6 @@ export default function Realtime() {
 
 
                 </div>
-                <br />
             <div className={`container-fluid ${styles.statcontainer}`}>
                     {originalData && (
                       <div className={`row text-center ${styles.text}`}>
@@ -155,15 +156,15 @@ export default function Realtime() {
                           <>
                           <h3 className={styles.sessiontitle}>DUELS</h3>
                             <div className="col-sm">
-                            <p className={styles.stattitle}>Wins</p>
-                            <h3 className={styles.stat}>{data.player.stats.Duels.wins - originalData.player.stats.Duels.wins}</h3>
+                              <p className={styles.stattitle}>Wins</p>
+                              <h3 className={styles.stat}>{data.player.stats.Duels.wins - originalData.player.stats.Duels.wins}</h3>
                             </div>
                             <div className="col-sm">
-                            <p className={styles.stattitle}>WLR</p>
-                            <h3 className={styles.stat}>{Math.round(data.player.stats.Duels.wins / data.player.stats.Duels.losses * 100) /100}</h3>
+                              <p className={styles.stattitle}>WLR</p>
+                              <h3 className={styles.stat}>{Math.round(data.player.stats.Duels.wins / data.player.stats.Duels.losses * 100) /100}</h3>
                             </div>
-                            <div className="col-sm">
-                            <p className={styles.stattitle}>Kills</p>
+                              <div className="col-sm">
+                              <p className={styles.stattitle}>Kills</p>
                             <h3 className={styles.stat}>{data.player.stats.Duels.kills - originalData.player.stats.Duels.kills}</h3>
                             </div>
                             <div className="col-sm">
@@ -176,6 +177,7 @@ export default function Realtime() {
                     )}
             </div>
             </div>
+            {/* <p>Notice: This page is not reccommended for use on mobile.</p> */}
         </>
     )
 }

@@ -8,11 +8,16 @@
   text-shadow: #f87591 0px 5px 10px;
 }
 
+@font-face {
+  font-family: "Quinquefive";
+  src: url("../public/fonts/Quinquefive.ttf");
+}
+
 .statcard {
   /* width: 20rem; */
   border: none !important;
-  color: white;
+  color: #f87591;
   background-color: transparent;
-  font-family: "VCR OSD Mono";
+  font-family: "Quinquefive", system-ui;
   text-transform: uppercase;
 }

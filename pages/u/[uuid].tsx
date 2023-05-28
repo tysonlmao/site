@@ -68,12 +68,13 @@ export default function Stats() {
         <div className={styles.title}>
           <h2 className={`${styles.title} text-center animate__fadeInDown animate__animated`}>{data?.player.displayname}</h2>
         </div>
-          <div className={`card ${styles.statcard}`}>
+        <div className={`card ${styles.statcard}`}>
             {data && (
-              <div className={`text-center ${styles.stats}`}>
+              <div className={` text-center ${styles.stats}`}>
                   <NetworkLevel networkExp={data.player.networkExp} />
                   <h3><span className={styles.statvalue}>{data.player.karma.toLocaleString()}</span> Karma</h3>
                   <PlayerFirstLogin firstLogin={data.player.firstLogin}/>
+                  <h3><span className={styles.statvalue}>{data.player.achievementPoints.toLocaleString()}</span> AP</h3>
                 </div>
             )}
           </div>
