@@ -27,7 +27,8 @@ export default function Home() {
     "Be part of the solution",
     "Do the simple things",
     "Start simple, get complex",
-    "Don't ice an uncooked cake"
+    "Don't ice an uncooked cake",
+    "Less haste, more speed"
   ]
   const [random, setRandom] = useState("");
 
