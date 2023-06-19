@@ -13,7 +13,7 @@
     "@next/font": "^13.4.2",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/react-dom": "18.2.6",
     "@vercel/analytics": "^1.0.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
